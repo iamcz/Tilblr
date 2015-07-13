@@ -4,8 +4,8 @@
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
+* Api::BlogsController (search)
+* Api::PostsController (search)
 
 ### Views
 

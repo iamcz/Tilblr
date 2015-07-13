@@ -4,8 +4,8 @@
 ### Models
 
 ### Controllers
-Api::BlogsController (update, destroy)
-Api::PostsController (create, show, update, destroy)
+* Api::BlogsController (update, destroy)
+* Api::PostsController (create, show, update, destroy)
 
 ### Views
 * blogs/show.json.jbuilder
