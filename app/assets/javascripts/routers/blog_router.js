@@ -9,6 +9,7 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
 
   index: function () {
     this.model.fetch();
+    var BlogView = new Tilblr.Views.BlogShow({model: this.model})
     alert("this is blog " + this.model.id);
   }
 });
