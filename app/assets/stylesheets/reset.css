@@ -1,4 +1,4 @@
-html, body, h1, p, a, form, label, input, button {
+html, body, h1, p, a, form, label, input, button, ul, li {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -6,6 +6,7 @@ html, body, h1, p, a, form, label, input, button {
 
 	font: inherit;
 	text-decoration: none;
+	list-style: none;
 }
 
 html, body {
