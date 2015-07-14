@@ -1,0 +1,10 @@
+<section class="login-form">
+  <h1>tilblr</h1>
+  <%= form_for :user do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit "Log in" %>
+  <% end %>
+</section>
