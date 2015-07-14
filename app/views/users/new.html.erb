@@ -1,0 +1,13 @@
+<section class="register-form">
+  <h1>tilblr</h1>
+  <p>Tagline 1</p>
+  <p>Tagline 2</p>
+  <%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  <% end %>
+</section>
