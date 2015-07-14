@@ -1,7 +1,9 @@
-<navbar>
-  <h1>
-    <a href="#">til</a>
-  </h1>
-  <%= link_to "Log in", new_session_url %>
-  <%= link_to "Sign Up", new_user_url  %>
-</navbar>
+<header id="main-header">
+  <navbar class="group">
+    <h1 id="header-logo">
+      <a href="#">til</a>
+    </h1>
+    <%= link_to "Log in", {controller: :sessions, action: :new}, { class: "login-link" } %>
+    <%= link_to "Sign Up", {controller: :users, action: :new}, { class: "register-link" } %>
+  </navbar>
+</header>

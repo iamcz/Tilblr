@@ -1,0 +1,11 @@
+#main-header {
+}
+
+#header-logo {
+	font-size: 1.4em;
+	float: left;
+}
+
+.login-link, .register-link {
+	float: right;
+}
