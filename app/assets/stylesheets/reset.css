@@ -11,3 +11,9 @@ html, body, h1, p, a, form, label, input, button {
 body {
 	font-family: sans-serif;
 }
+
+.group:after {
+	content: "";
+	display: block;
+	clear: both;
+}
