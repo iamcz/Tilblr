@@ -7,9 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render text: "Successfully created account!"
+      redirect_to root_url
     else
-      render @user.errors.full_messages
+      flash[:errors].now @user.errors.full_messages
+      render :new
     end
   end
 
