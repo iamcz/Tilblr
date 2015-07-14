@@ -20,4 +20,11 @@ RSpec.describe User, type: :model do
   it "has a session token" do
     expect(build(:user).session_token).to be
   end
+
+  it "can be found by credentials" do
+    user = build(:user)
+    user.save
+
+    expect(User.find_by_credentials(user.email, user.password)).to eq(user)
+  end
 end
