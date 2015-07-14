@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if @user
       login @user
-      redirect_to root_url
+      redirect_to @user.active_blog
     else
       flash[:errors] = ["Invalid email/password combination"]
       redirect_to new_session_url

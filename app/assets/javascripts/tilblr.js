@@ -7,7 +7,3 @@ window.Tilblr = {
     alert('Hello from Backbone!');
   }
 };
-
-$(document).ready(function(){
-  Tilblr.initialize();
-});
