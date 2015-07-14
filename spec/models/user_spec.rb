@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
   end
 
   it "is valid when a valid username, password, and email are specified" do
-    expect(build(:user)).to be_valid
+    expect(build(:user_with_active_blog)).to be_valid
   end
 
   it "has a session token" do
@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
   end
 
   it "can be found by credentials" do
-    user = build(:user)
+    user = build(:user_with_active_blog)
     user.save
 
     expect(User.find_by_credentials(user.email, user.password)).to eq(user)
@@ -33,5 +33,12 @@ RSpec.describe User, type: :model do
     expect(user.password).not_to eq(user.password_digest)
 
     expect(User.column_names).not_to include("password")
+  end
+
+  it "has a blog upon creation" do
+    user = build(:user_with_active_blog)
+    user.save
+
+    expect(user.blogs.count).to eq(1)
   end
 end
