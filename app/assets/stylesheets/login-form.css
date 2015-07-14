@@ -1,0 +1,33 @@
+.login-form {
+	margin: 100px auto;
+	width: 350px;
+}
+
+.login-form form {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.login-form h1,
+.login-form p {
+	text-align: center;
+}
+
+.login-form h1 {
+	font-size: 3em;
+	font-weight: 700;
+}
+
+.login-form input {
+	display: block;
+	width: 100%;
+}
+
+.login-form a {
+	width: 100%;
+	text-align: center;
+}
+
+.login-form input[type="submit"] {
+	cursor: pointer;
+}
