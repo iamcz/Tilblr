@@ -1,0 +1,29 @@
+.register-form {
+	margin: 100px auto;
+	width: 350px;
+}
+
+.register-form form {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.register-form h1,
+.register-form p {
+	text-align: center;
+}
+
+.register-form h1 {
+	font-size: 3em;
+	font-weight: 700;
+}
+
+.register-form input {
+	display: block;
+	width: 100%;
+}
+
+.register-form input[type="submit"] {
+	cursor: pointer;
+}
+
