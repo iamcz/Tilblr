@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
+  has_many :blogs
+
   def self.find_by_credentials(email, password) 
     user = User.find_by_email(email)
     return unless user
