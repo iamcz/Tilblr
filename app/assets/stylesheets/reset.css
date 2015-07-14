@@ -1,0 +1,13 @@
+html, body, h1, p, a, form, label, input, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+
+	font: inherit;
+	text-decoration: none;
+}
+
+body {
+	font-family: sans-serif;
+}
