@@ -1,5 +1,11 @@
 <script>
 $(function () {
-  Tilblr.initialize();
+  var blogId = <%= @blog.id %>;
+  var blog = new Tilblr.Models.Blog({id: blogId});
+  var router = new Tilblr.Routers.BlogRouter({
+    model: blog
+  });
+
+  Tilblr.initialize(router);
 });
 </script>

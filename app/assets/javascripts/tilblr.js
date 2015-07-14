@@ -4,6 +4,6 @@ window.Tilblr = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    Backbone.history.start();
   }
 };
