@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7', require: true
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'backbone-on-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
