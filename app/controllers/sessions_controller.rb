@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by_credentials(*session_params)
+    @user = User.find_by_credentials(*session_params.values)
 
     if @user
       login @user

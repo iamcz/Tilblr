@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   attr_accessor :password
-  validates :username, presence: true
+  validates :username, :session_token, :password_digest, presence: true
   validates :password, length: {minimum: 8, allow_nil: true}
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
 
@@ -22,7 +22,8 @@ class User < ActiveRecord::Base
   end
 
   def reset_session_token
-    self.session_token = SecureRandom.urlsafe_base64
+    self.update(session_token: SecureRandom.urlsafe_base64)
+
     self.session_token
   end
 
@@ -30,6 +31,6 @@ class User < ActiveRecord::Base
 
   def ensure_session_token
     return if self.session_token
-    self.reset_session_token
+    reset_session_token
   end
 end

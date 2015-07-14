@@ -3,7 +3,9 @@
     <h1 id="header-logo">
       <a href="#">til</a>
     </h1>
-    <%= link_to "Log in", {controller: :sessions, action: :new}, { class: "login-link" } %>
-    <%= link_to "Sign Up", {controller: :users, action: :new}, { class: "register-link" } %>
+    <% unless logged_in? %>
+      <%= link_to "Log in", {controller: :sessions, action: :new}, { class: "login-link" } %>
+      <%= link_to "Sign Up", {controller: :users, action: :new}, { class: "register-link" } %>
+    <% end %>
   </navbar>
 </header>
