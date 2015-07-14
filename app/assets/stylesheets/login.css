@@ -27,7 +27,3 @@
 	width: 100%;
 	text-align: center;
 }
-
-.login-form input[type="submit"] {
-	cursor: pointer;
-}

@@ -16,6 +16,10 @@ body {
 	font-family: sans-serif;
 }
 
+input[type="submit"] {
+	cursor: pointer;
+}
+
 .group:after {
 	content: "";
 	display: block;

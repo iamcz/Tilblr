@@ -7,6 +7,8 @@
 	float: left;
 }
 
-.login-link, .register-link {
+.login-link, 
+.register-link, 
+.logout-button {
 	float: right;
 }
