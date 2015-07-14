@@ -16,4 +16,8 @@ RSpec.describe User, type: :model do
   it "is valid when a valid username, password, and email are specified" do
     expect(build(:user)).to be_valid
   end
+
+  it "has a session token" do
+    expect(build(:user).session_token).to be
+  end
 end
