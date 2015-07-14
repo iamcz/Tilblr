@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
 
   after_initialize :ensure_session_token
-  before_save :ensure_active_blog
+  before_validation :ensure_active_blog
 
   has_many :blogs, inverse_of: :owner
   belongs_to :active_blog, class_name: "Blog", foreign_key: :active_blog_id, inverse_of: :active_user
