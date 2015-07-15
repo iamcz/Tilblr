@@ -54,7 +54,7 @@
 .post {
 	background: #EEE;
 	padding: 10px 20px;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .post:not(:last-child) {
