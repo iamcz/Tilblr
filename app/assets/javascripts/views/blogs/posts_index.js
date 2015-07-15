@@ -10,7 +10,7 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template());
 
-    //this.addNewPost();
+    this.addNewPost();
     this.addPosts();
     
     return this;
@@ -21,6 +21,11 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
       var postView = new Tilblr.Views.PostShow({ model: post });
       this.addSubview("#posts", postView);
     }.bind(this));
+  },
+
+  addNewPost: function () {
+    var newPostView = Tilblr.Views.NewPost({el: "#new-post"});
+    this.addSubview("#new-posts", newPostView);
   }
 })
 
