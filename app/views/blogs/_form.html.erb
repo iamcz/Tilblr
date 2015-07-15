@@ -1,7 +1,9 @@
-<%= form_for :blog, url: {controller: :blogs, action: :create}, html: { id: "blog-form" } do |f| %>
-  <h2>Create a new blog</h2>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.submit "Create blog" %>
-  <button class="cancel-blog">Cancel</button>
-<% end %>
+<section class="modal-container" id="blog-form">
+  <%= form_for :blog, url: {controller: :blogs, action: :create} do |f| %>
+    <h2>Create a new blog</h2>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.submit "Create blog" %>
+    <button class="cancel-blog">Cancel</button>
+  <% end %>
+</section>
