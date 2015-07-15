@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   before_validation :ensure_active_blog
 
   has_many :blogs, inverse_of: :owner
+  has_many :posts, through: :blogs, source: :posts
   belongs_to :active_blog, class_name: "Blog", foreign_key: :active_blog_id, inverse_of: :active_user
 
   def self.find_by_credentials(email, password) 

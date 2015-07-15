@@ -9,6 +9,12 @@ FactoryGirl.define do
       after(:build) do |user|
         blog = build(:blog, active_user: user)
       end
+
+      factory :user_with_post do 
+        after(:build) do |user|
+          post = build(:post, blog: user.active_blog)
+        end
+      end
     end
   end
 end

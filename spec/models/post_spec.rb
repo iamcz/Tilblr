@@ -22,6 +22,6 @@ RSpec.describe Post, type: :model do
   end
 
   it "should be associated with a user" do
-    expect(build(:post_with_blog_and_user).post).to be
+    expect(build(:post_with_blog_and_user).user).to be
   end
 end
