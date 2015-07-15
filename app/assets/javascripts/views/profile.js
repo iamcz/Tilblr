@@ -4,6 +4,7 @@ Tilblr.Views.ProfileView = Backbone.View.extend({
   },
 
   render: function () {
+    this.$el.css({display: "block"});
     this.addBlogs();
     return this;
   },

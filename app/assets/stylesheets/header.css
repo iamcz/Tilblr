@@ -9,10 +9,22 @@
 
 .login-link, 
 .register-link, 
-#profile-button {
+#profile {
 	float: right;
 }
 
-#profile-button > #profile-nav {
+#profile-nav {
 	display: none;
+}
+
+#profile-nav h6 {
+	font-size: .6em;
+	font-weight: 700;
+	float: left;
+}
+
+#profile-nav .new-blog,
+#profile-nav .logout-button {
+	font-size: .6em;
+	float: right;
 }
