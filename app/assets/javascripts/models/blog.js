@@ -7,6 +7,11 @@ Tilblr.Models.Blog = Backbone.Model.extend({
       delete response.owner;
     }
 
+    if (response.posts) {
+      this.posts().set(response.posts);
+      delete response.posts;
+    }
+
     return response;
   },
 
@@ -14,5 +19,11 @@ Tilblr.Models.Blog = Backbone.Model.extend({
     this._owner = this._owner || new Tilblr.Models.User();
 
     return this._owner;
+  },
+
+  posts: function () {
+    this._posts = this._posts || new Tilblr.Collections.Posts();
+
+    return this._posts;
   }
-})
+});
