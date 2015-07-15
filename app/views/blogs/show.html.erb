@@ -1,14 +1,10 @@
 <section id="blog">
 </section>
+
 <script>
 $(function () {
   var blogId = <%= @blog.id %>;
-  var blog = new Tilblr.Models.Blog({id: blogId});
-  var router = new Tilblr.Routers.BlogRouter({
-    model: blog,
-    $rootEl: $("#blog")
-  });
 
-  Tilblr.initialize(router);
+  Tilblr.initialize(blogId);
 });
 </script>

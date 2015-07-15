@@ -14,7 +14,7 @@ Tilblr.Views.ContainerView = Backbone.CompositeView.extend({
   profileDropdown: function (event) {
     event.stopPropegation();
 
-    this.addSubview("#profile", this._profileView)
+    this.addSubview("#profile", this._profileView);
   },
 
   removeProfileDropdown: function (event) {
