@@ -83,6 +83,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faker (1.4.2)
+      i18n (~> 0.5)
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.5)
@@ -249,6 +251,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   factory_girl_rails
+  faker
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
