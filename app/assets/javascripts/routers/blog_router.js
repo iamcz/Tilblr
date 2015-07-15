@@ -17,6 +17,9 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
       el: "body",
       collection: this.collection
     });
+
+    //var blogView = new Tilblr.Views.BlogShow({model: this.model});
+    //this._containerView.addSubview()
   },
 
   postIndex: function () {
@@ -25,6 +28,8 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
   },
 
   newBlog: function () {
+    this._containerView._swapDropdown();
+
     var newBlog = new Tilblr.Models.Blog();
     var blogForm = new Tilblr.Views.BlogForm({
       el: "#blog-form",
