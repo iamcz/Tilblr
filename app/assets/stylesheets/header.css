@@ -13,8 +13,19 @@
 	float: right;
 }
 
+#profile: {
+	position: relative;
+}
+
 #profile-nav {
 	display: none;
+	position: absolute;
+	right: 0;
+	width: 150px;
+}
+
+#profile-nav.visible {
+	display: block;
 }
 
 #profile-nav h6 {
