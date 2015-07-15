@@ -7,6 +7,7 @@
       <%= link_to "Log in", {controller: :sessions, action: :new}, { class: "login-link" } %>
       <%= link_to "Sign Up", {controller: :users, action: :new}, { class: "register-link" } %>
     <% else %>
+      <button id="user-profile">Profile</button>
       <%= button_to "Log Out", { controller: :sessions, action: :destroy }, method: :delete, form_class: "logout-button" %>
     <% end %>
   </navbar>
