@@ -4,7 +4,7 @@ class Api::PostsController < ApplicationController
   end
 
   def create
-    @post = post.new(post_params)
+    @post = current_user.active_blog.posts.new(post_params)
 
     if @post.save
       render :show
