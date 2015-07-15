@@ -7,8 +7,7 @@ FactoryGirl.define do
 
     factory :user_with_active_blog do
       after(:build) do |user|
-        blog = build(:blog, owner: user)
-        user.active_blog = blog
+        blog = build(:blog, active_user: user)
       end
     end
   end

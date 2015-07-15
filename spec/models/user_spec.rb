@@ -38,6 +38,7 @@ RSpec.describe User, type: :model do
   it "has a blog upon creation" do
     user = build(:user_with_active_blog)
     user.save
+    debugger;
 
     expect(user.blogs.count).to eq(1)
   end
