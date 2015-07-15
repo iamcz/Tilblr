@@ -6,7 +6,6 @@ Tilblr.Views.BlogSidebar = Backbone.View.extend({
   },
 
   render: function () {
-    debugger;
     this.$el.html(this.template({blog: this.model}));
 
     return this;

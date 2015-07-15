@@ -7,6 +7,7 @@ Tilblr.Views.BlogShow = Backbone.CompositeView.extend({
 
   render: function () {
     this.$el.html(this.template({blog: this.model}));
+    debugger;
 
     this.addSidebar();
     //this.addPosts();

@@ -24,7 +24,10 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
 
   postIndex: function () {
     this.model.fetch();
-    var blogView = new Tilblr.Views.BlogShow({model: this.model})
+    var blogView = new Tilblr.Views.BlogShow({
+      el: "#blog",
+      model: this.model
+    });
   },
 
   newBlog: function () {
