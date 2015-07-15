@@ -20,11 +20,11 @@ Tilblr.Views.NewPost = Backbone.View.extend({
     });
 
     this._swapView(postVorm)
-  }
+  },
 
   _swapView: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
     this.$el.html(this._currentView.render().$el);
   }
-})
+});

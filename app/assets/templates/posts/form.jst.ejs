@@ -1,0 +1,14 @@
+<input 
+  type="text" 
+  name="post[title]" 
+  val="<%= post.escape('title') %>" 
+  placeholder="Title">
+
+<input 
+  type="text" 
+  name="post[body]" 
+  val="<%= post.escape('body') %>" 
+  placeholder="Your text here">
+
+<button class="cancel-post">Cancel</button>
+<button>Submit</button>
