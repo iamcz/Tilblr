@@ -13,19 +13,13 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
 
   setupViews: function () {
     this._containerView = new Tilblr.Views.ContainerView({
-      $el: this.$rootEl
+      el: "body",
+      collection: this.collection
     });
-
-    // this._profileView = new Tilblr.Views.ProfileView({
-    //   collection: this.collection
-    // });
-
-    // this._containerView.addSubview("#profile-button", this._profileView);
   },
 
   postIndex: function () {
     this.model.fetch();
     var blogView = new Tilblr.Views.BlogShow({model: this.model})
-    // this._containerView.html(blogView.render().$el);
   }
 });

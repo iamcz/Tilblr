@@ -9,7 +9,7 @@ Tilblr.Views.ProfileView = Backbone.View.extend({
   },
 
   addBlogs: function () {
-    this.$("profile-blogs").empty();
+    this.$("#profile-blogs").empty();
 
     this.collection.each(function (blog) {
       var profileBlogItem = new Tilblr.Views.ProfileBlogItem({model: blog});
