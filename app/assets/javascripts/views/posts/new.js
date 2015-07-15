@@ -1,7 +1,7 @@
 Tilblr.Views.NewPost = Backbone.View.extend({
   events: {
     "click button.create-post": "formView",
-    "click button.cancel-post": "buttonView"
+    "click button.cancel-post": "buttonView",
   },
 
   initialize: function (options) {
@@ -9,8 +9,9 @@ Tilblr.Views.NewPost = Backbone.View.extend({
   },
 
   buttonView: function () {
+    event.preventDefault();
     var postButton = new Tilblr.Views.PostButton();
-    this._swapView(postButton)
+    this._swapView(postButton);
   },
 
   formView: function () {

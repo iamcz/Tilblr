@@ -1,6 +1,6 @@
 Tilblr.Views.PostForm = Backbone.View.extend({
   template: JST["posts/form"],
-  tagName: "section",
+  tagName: "form",
   className: "post",
   id: "new-post-form",
 
