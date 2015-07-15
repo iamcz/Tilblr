@@ -17,3 +17,46 @@
 	margin: 100px auto;
 	background: #FFF;
 }
+
+#blog {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#blog > * {
+	padding: 10px;
+}
+
+#blog #posts-index {
+	width: 630px;
+	float: left;
+}
+
+#blog #blog-sidebar {
+	width: 230px;
+	float: right;
+}
+
+#posts-index h1 {
+	font-size: 2em;
+}
+
+#posts-index h1,
+#posts-index p {
+	margin: 10px 0; 
+}
+
+#blog-sidebar h1 {
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.post {
+	background: #EEE;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.post:not(:last-child) {
+	margin-bottom: 10px;
+}
