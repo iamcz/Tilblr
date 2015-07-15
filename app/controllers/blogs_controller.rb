@@ -14,4 +14,10 @@ class BlogsController < ApplicationController
 
     redirect_to current_user.active_blog
   end
+
+  private
+
+  def blog_params
+    params.require(:blog).permit(:title)
+  end
 end
