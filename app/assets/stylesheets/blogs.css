@@ -57,6 +57,17 @@
 	border-radius: 5px;
 }
 
+.create-post.post,
+#new-post-form.post,
 .post:not(:last-child) {
 	margin-bottom: 10px;
+}
+
+#new-post .create-post {
+	width: 100%;
+}
+
+#new-post-form textarea {
+	width: 100%;
+	min-height: 100px;
 }
