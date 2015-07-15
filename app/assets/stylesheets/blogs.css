@@ -1,0 +1,7 @@
+#blog-form {
+	display: none;
+}
+
+#blog-form.visible {
+	display: block;
+}
