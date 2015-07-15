@@ -5,16 +5,16 @@ Tilblr.Views.ContainerView = Backbone.CompositeView.extend({
   },
 
   initialize: function () {
-    this._profileView = new Tilblr.Views.ProfileView({
-      model: this.model,
-      collection: this.collection
-    });
   },
 
   profileDropdown: function (event) {
     event.stopPropegation();
 
-    this.addSubview("#profile", this._profileView);
+    this._profileView = new Tilblr.Views.ProfileView({
+      $el: this.$("profile-nav"),
+      collection: this.collection
+    });
+    this.addSubview("#profile-nav", this._profileView);
   },
 
   removeProfileDropdown: function (event) {

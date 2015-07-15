@@ -9,6 +9,10 @@
 
 .login-link, 
 .register-link, 
-.logout-button {
+#profile-button {
 	float: right;
+}
+
+#profile-button > #profile-nav {
+	display: none;
 }

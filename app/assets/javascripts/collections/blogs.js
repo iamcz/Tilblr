@@ -12,7 +12,7 @@ Tilblr.Collections.Blogs = Backbone.Collection.extend({
       blog.fetch({
         success: function () {
           this.add(blog);
-        }
+        }.bind(this)
       });
     }
 
