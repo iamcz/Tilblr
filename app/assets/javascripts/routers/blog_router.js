@@ -1,16 +1,36 @@
 Tilblr.Routers.BlogRouter = Backbone.Router.extend({
   routes: {
-    "": "index"
+    "": "postIndex",
+    "new/blog": "newBlog"
   },
 
   initialize: function (options) {
     this.model = options.model;
+    this.collection = options.collection;
     this.$rootEl = options.$rootEl;
+
+    this.setupViews();
   },
 
-  index: function () {
+  setupViews: function () {
+    this._containerView = new Tilblr.Views.ContainerView({
+      el: "body",
+      collection: this.collection
+    });
+  },
+
+  postIndex: function () {
     this.model.fetch();
     var blogView = new Tilblr.Views.BlogShow({model: this.model})
-    this.$rootEl.html(blogView.render().$el);
+  },
+
+  newBlog: function () {
+    var newBlog = new Tilblr.Models.Blog();
+    var blogForm = new Tilblr.Views.BlogForm({
+      el: "#blog-form",
+      model: newBlog
+    });
+
+    blogForm.render();
   }
 });

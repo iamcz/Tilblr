@@ -1,8 +1,10 @@
-html, body, h1, h2, p, a, form, label, input, button, ul, li {
+html, body, h1, h2, h3, h4, h5, h6, p, a, form, label, input, button, ul, li {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	outline: 0;
+
+	background: transparent;
 
 	font: inherit;
 	text-decoration: none;

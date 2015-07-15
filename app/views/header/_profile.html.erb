@@ -1,0 +1,21 @@
+<section id="profile">
+  <button id="profile-button">
+    Profile
+  </button>
+
+  <nav id="profile-nav">
+    <header class="account group">
+      <h6>ACCOUNT</h6>
+      <%= button_to "Log Out", 
+        { controller: :sessions, action: :destroy }, 
+        method: :delete, form_class: "logout-button" %>
+    </header>
+
+    <header class="blogs group">
+      <h6>BLOGS</h6>
+      <a href="#/new/blog" class="new-blog">+ New Blog</a>
+    </header>
+    <ul id="profile-blogs">
+    </ul>
+  </nav>
+</section>

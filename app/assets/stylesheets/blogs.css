@@ -1,0 +1,19 @@
+.modal-container {
+	display: none;
+}
+
+.modal-container.visible {
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.modal-container form {
+	width: 500px;
+	margin: 100px auto;
+	background: #FFF;
+}

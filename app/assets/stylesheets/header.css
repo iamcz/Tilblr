@@ -9,6 +9,33 @@
 
 .login-link, 
 .register-link, 
-.logout-button {
+#profile {
+	float: right;
+}
+
+#profile: {
+	position: relative;
+}
+
+#profile-nav {
+	display: none;
+	position: absolute;
+	right: 0;
+	width: 150px;
+}
+
+#profile-nav.visible {
+	display: block;
+}
+
+#profile-nav h6 {
+	font-size: .6em;
+	font-weight: 700;
+	float: left;
+}
+
+#profile-nav .new-blog,
+#profile-nav .logout-button {
+	font-size: .6em;
 	float: right;
 }
