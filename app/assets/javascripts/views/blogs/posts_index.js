@@ -1,7 +1,5 @@
 Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
   template: JST["blogs/posts_index"],
-  //id: "posts",
-  //tagName: "section",
 
   initialize: function () {
     this.listenTo(this.collection, "add remove", this.render);
@@ -24,8 +22,8 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
   },
 
   addNewPost: function () {
-    var newPostView = Tilblr.Views.NewPost({el: "#new-post"});
-    this.addSubview("#new-posts", newPostView);
+    var newPostView = new Tilblr.Views.NewPost({el: "#new-post"});
+    this.addSubview("#new-post", newPostView);
   }
 })
 

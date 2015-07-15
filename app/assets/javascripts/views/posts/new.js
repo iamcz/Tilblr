@@ -19,7 +19,7 @@ Tilblr.Views.NewPost = Backbone.View.extend({
       model: newPost
     });
 
-    this._swapView(postVorm)
+    this._swapView(postForm)
   },
 
   _swapView: function (view) {
