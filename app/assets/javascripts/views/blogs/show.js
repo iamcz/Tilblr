@@ -10,7 +10,7 @@ Tilblr.Views.BlogShow = Backbone.CompositeView.extend({
     debugger;
 
     this.addSidebar();
-    //this.addPosts();
+    this.addPosts();
 
     return this;
   },
@@ -24,4 +24,4 @@ Tilblr.Views.BlogShow = Backbone.CompositeView.extend({
     var postsView = new Tilblr.Views.PostsIndex({collection: this.collection});
     this.addSubview("#posts-index", postsView);
   }
-})
+});

@@ -9,8 +9,8 @@ window.Tilblr = {
     var blog = blogs.getOrFetch(blogId);
 
     new Tilblr.Routers.BlogRouter({
-      collection: blogs,
-      model: blog
+      blogs: blogs,
+      blog: blog
     });
 
     Backbone.history.start();
