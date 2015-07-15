@@ -11,14 +11,13 @@ Tilblr.Views.ContainerView = Backbone.CompositeView.extend({
       el: "#profile-nav",
       collection: this.collection
     });
+    this.collection.fetch();
 
     this._swapDropdown(profile);
   },
 
   removeDropdown: function (event) {
     this._swapDropdown();
-    //this._profileView.remove()
-    //this._profileView.$el.css({display: "none"});
   },
 
   _swapDropdown: function (dropdown) {
