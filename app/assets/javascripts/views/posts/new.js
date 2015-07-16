@@ -10,11 +10,13 @@ Tilblr.Views.NewPost = Backbone.View.extend({
 
   buttonView: function () {
     event.preventDefault();
+    this.$el.removeClass("active");
     var postButton = new Tilblr.Views.PostButton();
     this._swapView(postButton);
   },
 
   formView: function () {
+    this.$el.addClass("active");
     var newPost = new Tilblr.Models.Post();
     var postForm = new Tilblr.Views.PostForm({
       model: newPost,

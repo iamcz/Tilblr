@@ -1,8 +1,8 @@
 Tilblr.Views.PostForm = Backbone.View.extend({
   template: JST["posts/form"],
   tagName: "form",
-  className: "post",
-  id: "new-post-form",
+  className: "post group",
+  id: "post-form",
   events: {
     "click .submit-post": "submitPost",
     "keypress textarea": "changeClass"

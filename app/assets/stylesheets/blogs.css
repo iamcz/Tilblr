@@ -58,22 +58,59 @@
 }
 
 .create-post.post,
-#new-post-form.post,
+#post-form.post,
 .post:not(:last-child) {
 	margin-bottom: 10px;
 }
 
-#new-post .create-post {
-	width: 100%;
+#new-post.active:before {
+	content: "";
+	display: block;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.25);
 }
 
-#new-post-form textarea {
+#new-post .create-post {
+	width: 100%;
+	height: 50px
+}
+
+#post-form {
+	position: relative;
+	z-index: 2;
+}
+
+#post-form textarea {
 	min-width: 100%;
 	max-width: 100%;
 	min-height: 100px;
 	resize: none;
 }
 
-#new-post-form textarea.error {
+#post-form textarea.error {
 	background: rgba(255, 0, 0, 0.1);
+}
+
+#post-form button {
+	padding: 5px 10px;
+	border-radius: 2px;
+	font-size: .8em;
+	font-weight: 700;
+	color: white;
+}
+
+
+#post-form .cancel-post {
+	float: left;
+	background: #9DA6AF;
+}
+
+#post-form .submit-post {
+	float: right;
+	background: #529ECC;
 }
