@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     end
 
     resources :posts, only: [:show, :create, :update, :destroy]
+    resources :users, only: :show
   end
 end
