@@ -52,6 +52,11 @@
 }
 
 .post {
+}
+
+.post > button,
+.post > form,
+.post > section {
 	background: #EEE;
 	padding: 10px 20px;
 	border-radius: 5px;
@@ -63,7 +68,7 @@
 	margin-bottom: 10px;
 }
 
-#new-post.active:before {
+.post.active:before {
 	content: "";
 	display: block;
 	position: fixed;
@@ -105,12 +110,12 @@
 }
 
 
-#post-form .cancel-post {
+#post-form .cancel {
 	float: left;
 	background: #9DA6AF;
 }
 
-#post-form .submit-post {
+#post-form .submit {
 	float: right;
 	background: #529ECC;
 }

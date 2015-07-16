@@ -2,7 +2,7 @@
   <input 
     type="text" 
     name="post[title]" 
-    val="<%= post.escape('title') %>" 
+    value="<%= post.escape('title') %>" 
     placeholder="Title">
 </h1>
 
@@ -13,5 +13,5 @@
     placeholder="Your text here"><%= post.escape('body') %></textarea>
 </p>
 
-<button class="cancel-post">Cancel</button>
-<button class="submit-post">Submit</button>
+<button class="cancel">Cancel</button>
+<button class="submit">Submit</button>

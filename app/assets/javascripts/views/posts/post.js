@@ -6,7 +6,7 @@ Tilblr.Views.PostView = Backbone.View.extend({
   className: "post",
   tagName: "article",
   events: {
-    "click .cancel-edit": "showView",
+    "click .cancel": "showView",
     "click .edit-post": "editView"
   },
 
@@ -15,6 +15,7 @@ Tilblr.Views.PostView = Backbone.View.extend({
   },
 
   editView: function () {
+    this.$el.addClass("active");
     var postForm = new Tilblr.Views.PostForm({
       model: this.model,
       collection: this.collection
@@ -24,6 +25,8 @@ Tilblr.Views.PostView = Backbone.View.extend({
   },
 
   showView: function () {
+    event.preventDefault();
+    this.$el.removeClass("active");
     var showView = new Tilblr.Views.PostShow({model: this.model});
     this._swapView(showView);
   },
