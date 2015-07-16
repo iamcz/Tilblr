@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.find(params[:id])
 
-    if current_user.blogs.include?(@blog)
+    if logged_in? && current_user.blogs.include?(@blog)
       current_user.update(active_blog: @blog)
     end
   end

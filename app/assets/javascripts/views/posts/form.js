@@ -22,6 +22,7 @@ Tilblr.Views.PostForm = Backbone.View.extend({
   
   submitPost: function (event) {
     event.preventDefault();
+    this.$("input")
     
     var formData = this.$el.serializeJSON()["post"];
 
@@ -31,8 +32,19 @@ Tilblr.Views.PostForm = Backbone.View.extend({
     post.save(formData, {
       success: function () {
         posts.add(post);
-      }
+      },
+      error: function () {
+        this.enableForm();
+      }.bind(this)
     });
+  },
+
+  disableForm: function () {
+    this.$el.find("input, textarea, button").prop({"disabled": true})
+  },
+
+  enableForm: function () {
+    this.$el.find("input, textarea, button").prop({"disabled": false})
   },
 
   changeClass: function (event) {
