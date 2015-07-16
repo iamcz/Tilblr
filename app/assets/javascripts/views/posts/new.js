@@ -1,4 +1,7 @@
 Tilblr.Views.NewPost = Backbone.View.extend({
+  tagName: "article",
+  className: "post",
+  id: "new-post",
   events: {
     "click button.create-post": "formView",
     "click button.cancel-post": "buttonView",
