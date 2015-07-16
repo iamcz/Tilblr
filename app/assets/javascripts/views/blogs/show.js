@@ -22,6 +22,7 @@ Tilblr.Views.BlogShow = Backbone.CompositeView.extend({
   addPosts: function () {
     var postsView = new Tilblr.Views.PostsIndex({
       el: "#posts-index",
+      model: this.model,
       collection: this.model.posts()
     });
     this.addSubview("#posts-index", postsView);

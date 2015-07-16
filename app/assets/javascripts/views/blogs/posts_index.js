@@ -8,7 +8,10 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template());
 
-    this.addNewPost();
+    if (Tilblr.Models.currentUser.id === this.model.owner().id) {
+      this.addNewPost();
+    }
+
     this.addPosts();
     
     return this;

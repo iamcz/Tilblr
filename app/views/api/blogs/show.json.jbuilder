@@ -7,5 +7,5 @@ json.posts do
 end
 
 json.owner do 
-  json.username @blog.owner.username
+  json.extract! @blog.owner, :id, :username
 end
