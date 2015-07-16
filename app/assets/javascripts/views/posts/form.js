@@ -9,7 +9,7 @@ Tilblr.Views.PostForm = Backbone.View.extend({
   },
 
   initialize: function () {
-    this.model.once("invalid", function (model, error) {
+    this.model.on("invalid", function (model, error) {
       this.$("textarea").addClass("error");
     }.bind(this));
   },
@@ -36,7 +36,6 @@ Tilblr.Views.PostForm = Backbone.View.extend({
   },
 
   changeClass: function (event) {
-    debugger;
     var $textarea = this.$("textarea");
     setTimeout(function () {
       var body = $(event.currentTarget).val();
