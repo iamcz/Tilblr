@@ -3,7 +3,8 @@ Tilblr.Models.User = Backbone.Model.extend({
   
   parse: function (response) {
     if (response.active_blog) {
-      this.activeBlog().set(response.active_blog, { parse: true });
+      //debugger;
+      this.activeBlog().set(this.activeBlog().parse(response.active_blog));
       delete response.active_blog;
     }
 
@@ -11,7 +12,7 @@ Tilblr.Models.User = Backbone.Model.extend({
   },
   
   activeBlog: function () {
-    this._activeBlog = this._activeBlog || new Tilblr.Models.Blog();
+    this._activeBlog = this._activeBlog || new Tilblr.Models.Blog({ user: this });
 
     return this._activeBlog;
   }
