@@ -9,7 +9,7 @@ class Api::PostsController < ApplicationController
     if @post.save
       render :show
     else
-      render json: @post.errors.full_messages
+      render json: @post.errors.full_messages, status: :unprocessable_entity
     end
   end
 

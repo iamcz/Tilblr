@@ -25,7 +25,7 @@ Tilblr.Views.PostForm = Backbone.View.extend({
       success: function () {
         debugger;
         posts.add(post);
-      }
+      },
     });
   }
 });

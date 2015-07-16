@@ -4,9 +4,12 @@ window.Tilblr = {
   Views: {},
   Routers: {},
 
-  initialize: function(blogId) {
+  initialize: function(blogId, currentUserId) {
     var blogs = new Tilblr.Collections.Blogs();
     var blog = blogs.getOrFetch(blogId);
+
+    // Not sure where this should be done
+    Tilblr.Models.currentUser = new Tilblr.Models.User({id: currentUserId});
 
     new Tilblr.Routers.BlogRouter({
       blogs: blogs,
