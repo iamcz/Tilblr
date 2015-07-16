@@ -4,7 +4,7 @@
 <script>
 $(function () {
   var blogId = <%= @blog.id %>;
-  var currentUserId = <%= current_user.id %>;
+  var currentUserId = <%= logged_in? ? current_user.id : "undefined" %>;
 
   Tilblr.initialize(blogId, currentUserId);
 });
