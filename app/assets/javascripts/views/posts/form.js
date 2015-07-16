@@ -23,6 +23,7 @@ Tilblr.Views.PostForm = Backbone.View.extend({
 
     post.save(formData, {
       success: function () {
+        debugger;
         posts.add(post);
       }
     });

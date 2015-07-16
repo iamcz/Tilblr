@@ -4,7 +4,8 @@
 <script>
 $(function () {
   var blogId = <%= @blog.id %>;
+  var currentUserId = <%= current_user.id %>;
 
-  Tilblr.initialize(blogId);
+  Tilblr.initialize(blogId, currentUserId);
 });
 </script>
