@@ -21,6 +21,7 @@ Tilblr.Views.PostForm = Backbone.View.extend({
   },
   
   submitPost: function (event) {
+    debugger;
     event.preventDefault();
     
     var formData = this.$el.serializeJSON()["post"];
@@ -31,7 +32,7 @@ Tilblr.Views.PostForm = Backbone.View.extend({
     post.save(formData, {
       success: function () {
         posts.add(post);
-      },
+      }
     });
   },
 
