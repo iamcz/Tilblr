@@ -1,2 +1,10 @@
-<h1><%= blog.escape("title") %></h1>
+<header class="info-header group">
+  <h1><%= blog.escape("title") %></h1>
+
+  <% if (!blog.ownedByCurrentUser()) { %>
+    <button id="follow">Follow</button>
+  <% }; %>
+</header>
+
 <h2><%= blog.owner().escape("username") %></h2>
+

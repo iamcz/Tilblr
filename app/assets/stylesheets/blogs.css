@@ -37,6 +37,16 @@
 	float: right;
 }
 
+#blog-info {
+	background: #EEE;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+#follow {
+	float: right;
+}
+
 #posts-index h1 {
 	font-size: 2em;
 }
@@ -47,6 +57,7 @@
 }
 
 #blog-sidebar h1 {
+	float: left;
 	font-size: 1em;
 	font-weight: 700;
 }

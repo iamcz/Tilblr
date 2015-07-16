@@ -25,5 +25,9 @@ Tilblr.Models.Blog = Backbone.Model.extend({
     this._posts = this._posts || new Tilblr.Collections.Posts();
 
     return this._posts;
+  },
+
+  ownedByCurrentUser: function () {
+    return this.owner().id === Tilblr.Models.currentUser.id;
   }
 });
