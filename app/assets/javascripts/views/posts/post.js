@@ -8,6 +8,7 @@ Tilblr.Views.PostView = Backbone.View.extend({
   events: {
     "click .cancel": "showView",
     "click .edit-post": "editView",
+    "click .destroy-post": "destroyPost",
     "click .submit": "showView"
   },
 
@@ -30,6 +31,14 @@ Tilblr.Views.PostView = Backbone.View.extend({
     this.$el.removeClass("active");
     var showView = new Tilblr.Views.PostShow({model: this.model});
     this._swapView(showView);
+  },
+
+  destroyPost: function () {
+    this.model.destroy({
+      success: function () {
+        this.collection.remove(this.model);
+      }.bind(this)
+    });
   },
 
   _swapView: function (view) {

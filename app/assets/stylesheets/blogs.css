@@ -112,12 +112,26 @@
 	background: rgba(255, 0, 0, 0.1);
 }
 
-#post-form button {
+.post button:not(.create-post) {
 	padding: 5px 10px;
 	border-radius: 2px;
 	font-size: .8em;
 	font-weight: 700;
 	color: white;
+	margin: 10px;
+}
+
+.destroy-post,
+.edit-post {
+	float: right;
+}
+
+.edit-post {
+	background: #529ECC;
+}
+
+.destroy-post {
+	background: #C62E31;
 }
 
 
