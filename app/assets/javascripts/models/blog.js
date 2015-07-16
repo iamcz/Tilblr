@@ -14,10 +14,12 @@ Tilblr.Models.Blog = Backbone.Model.extend({
 
     if (response.follows) {
       this.follows().set(response.follows);
+      delete response.follows;
     }
 
     if (response.followers) {
       this.followers().set(response.followers);
+      delete response.followers;
     }
 
     return response;
@@ -36,11 +38,15 @@ Tilblr.Models.Blog = Backbone.Model.extend({
   },
 
   follows: function () {
-    this._follows = this._follows || new Tilblr.Collection.Follows();
+    this._follows = this._follows || new Tilblr.Collection.Follows([], { follower: this});
+    
+    return this._follows;
   },
   
   followers: function () {
-    this._followers = this._followers || new Tilblr.Collection.Follows();
+    this._followers = this._followers || new Tilblr.Collection.Follows([], { followee: this });
+
+    return this._followers;
   },
 
   ownedByCurrentUser: function () {

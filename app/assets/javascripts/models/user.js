@@ -3,8 +3,11 @@ Tilblr.Models.User = Backbone.Model.extend(
   
   parse: function (response) {
     if (response.active_blog) {
-      this.activeBlog().set(activeBlog)
-    },
+      this.activeBlog().set(activeBlog, { parse: true });
+      delete response.active_blog;
+    }
+
+    return response;
   },
   
   activeBlog: function () {
