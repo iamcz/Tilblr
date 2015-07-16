@@ -17,11 +17,13 @@ Tilblr.Views.PostForm = Backbone.View.extend({
     event.preventDefault();
     
     var formData = this.$el.serializeJSON()["post"];
-    debugger;
 
-    this.model.save(formData, {
+    var posts = this.collection;
+    var post = this.model;
+
+    post.save(formData, {
       success: function () {
-        debugger;
+        posts.add(post);
       }
     });
   }
