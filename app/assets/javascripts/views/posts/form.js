@@ -4,7 +4,14 @@ Tilblr.Views.PostForm = Backbone.View.extend({
   className: "post",
   id: "new-post-form",
   events: {
-    "click .submit-post": "submitPost"
+    "click .submit-post": "submitPost",
+    "keypress textarea": "changeClass"
+  },
+
+  initialize: function () {
+    this.model.once("invalid", function (model, error) {
+      this.$("textarea").addClass("error");
+    }.bind(this));
   },
 
   render: function () {
@@ -23,9 +30,21 @@ Tilblr.Views.PostForm = Backbone.View.extend({
 
     post.save(formData, {
       success: function () {
-        debugger;
         posts.add(post);
       },
     });
+  },
+
+  changeClass: function (event) {
+    debugger;
+    var $textarea = this.$("textarea");
+    setTimeout(function () {
+      var body = $(event.currentTarget).val();
+      if (body === "") {
+        $textarea.addClass("error");
+      } else {
+        $textarea.removeClass("error");
+      }
+    }, 0);
   }
 });

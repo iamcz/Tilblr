@@ -73,3 +73,7 @@
 	min-height: 100px;
 	resize: none;
 }
+
+#new-post-form textarea.error {
+	background: rgba(255, 0, 0, 0.1);
+}
