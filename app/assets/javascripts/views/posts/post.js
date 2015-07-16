@@ -1,7 +1,17 @@
 Tilblr.Views.PostView = Backbone.View.extend({
+  //id: "post-" + this.model.id,
+  id: function () {
+    return "post-" + this.model.id;
+  },
+  className: "post",
+  tagName: "article",
   events: {
     "click .cancel-edit": "showView",
     "click .edit-post": "editView"
+  },
+
+  initialize: function () {
+    this.showView();
   },
 
   editView: function () {
