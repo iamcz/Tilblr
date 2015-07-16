@@ -38,13 +38,13 @@ Tilblr.Models.Blog = Backbone.Model.extend({
   },
 
   follows: function () {
-    this._follows = this._follows || new Tilblr.Collection.Follows([], { follower: this});
+    this._follows = this._follows || new Tilblr.Collections.Follows([], { follower: this});
     
     return this._follows;
   },
   
   followers: function () {
-    this._followers = this._followers || new Tilblr.Collection.Follows([], { followee: this });
+    this._followers = this._followers || new Tilblr.Collections.Follows([], { followee: this });
 
     return this._followers;
   },

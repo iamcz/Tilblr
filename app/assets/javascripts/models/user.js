@@ -1,9 +1,9 @@
-Tilblr.Models.User = Backbone.Model.extend(
+Tilblr.Models.User = Backbone.Model.extend({
   urlRoot: "/api/users",
   
   parse: function (response) {
     if (response.active_blog) {
-      this.activeBlog().set(activeBlog, { parse: true });
+      this.activeBlog().set(response.active_blog, { parse: true });
       delete response.active_blog;
     }
 
@@ -11,8 +11,8 @@ Tilblr.Models.User = Backbone.Model.extend(
   },
   
   activeBlog: function () {
-    this._activeBlog = this._activeBlog || Tilblr.Models.Blog();
+    this._activeBlog = this._activeBlog || new Tilblr.Models.Blog();
 
     return this._activeBlog;
   }
-);
+});
