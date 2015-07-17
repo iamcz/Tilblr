@@ -22,16 +22,19 @@ Tilblr.Views.FollowButton = Backbone.View.extend({
   }
 
   toggleFollow: function () {
+    this.$el.prop({disabled: true});
+
     if (this.model.isNew()) {
-      this.model.save()
+      this.model.save();
     } else {
       this.model.destroy({
         success: function () {
           var followed_id = this.model.get("followed_id")
-          this.collection.remove(this.model);
-          this.model = new Tilblr.Models.Follow({})
-          this.collection.add(this.model);
-        }
+          // this.collection.remove(this.model);
+          this.model = new Tilblr.Models.Follow({});
+          this.model.fetch();
+          // this.collection.add(this.model);
+        }.bind(this)
       });
     }
   }
