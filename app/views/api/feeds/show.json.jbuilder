@@ -1,8 +1,12 @@
 json.extract! @blog, :id, :title
 
 json.posts @feed do |post|
-  json.extract! post, :id, :title, :body
+  json.extract! post, :id, :title, :body, :created_at
+  json.blog do
+    json.extract! post.blog, :id, :title
+  end
 end
-# json.followed_blogs @blog.followed_blogs do |followed_blog|
-#   json.extract! followed_blog, :id, :title
-# end
+
+json.owner do 
+  json.extract! @blog.owner, :id, :username
+end
