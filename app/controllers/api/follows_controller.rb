@@ -17,6 +17,6 @@ class Api::FollowsController < ApplicationController
     @blog = Blog.where.not(user_id: current_user.id).find(params[:blog_id])
 
     @follow = current_user.active_blog.unfollow(@blog)
-    render json: nil
+    render json: @follow
   end
 end

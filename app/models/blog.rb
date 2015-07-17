@@ -18,9 +18,11 @@ class Blog < ActiveRecord::Base
   end
 
   def unfollow(blog) 
-    follow = self.followed_follows.find(blog.id)
-    follow.destroy
+    follow = self.followed_follows.find_by_followed_id(blog.id)
+    
+    follow ? follow.destroy : nil
+    # follow.destroy if follow
 
-    follow
+    # follow
   end
 end
