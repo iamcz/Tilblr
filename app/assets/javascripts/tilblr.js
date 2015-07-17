@@ -10,6 +10,8 @@ window.Tilblr = {
 
     // Not sure where this should be done
     Tilblr.Models.currentUser = new Tilblr.Models.User({id: currentUserId});
+    Tilblr.Models.currentUser.fetch();
+    
 
     new Tilblr.Routers.BlogRouter({
       blogs: blogs,

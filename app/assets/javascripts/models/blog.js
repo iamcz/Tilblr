@@ -12,6 +12,16 @@ Tilblr.Models.Blog = Backbone.Model.extend({
       delete response.posts;
     }
 
+    if (response.follows) {
+      this.follows().set(response.follows);
+      delete response.follows;
+    }
+
+    if (response.followers) {
+      this.followers().set(response.followers);
+      delete response.followers;
+    }
+
     return response;
   },
 
@@ -25,6 +35,18 @@ Tilblr.Models.Blog = Backbone.Model.extend({
     this._posts = this._posts || new Tilblr.Collections.Posts();
 
     return this._posts;
+  },
+
+  follows: function () {
+    this._follows = this._follows || new Tilblr.Collections.Follows();
+    
+    return this._follows;
+  },
+  
+  followers: function () {
+    this._followers = this._followers || new Tilblr.Collections.Follows();
+
+    return this._followers;
   },
 
   ownedByCurrentUser: function () {
