@@ -11,6 +11,7 @@ window.Tilblr = {
     // Not sure where this should be done
     Tilblr.Models.currentUser = new Tilblr.Models.User({id: currentUserId});
 
+    // Needs a Current User and a Model (feed / blog)
     Tilblr.Models.currentUser.fetch({
       success: function () {
         new Tilblr.Routers.BlogRouter({

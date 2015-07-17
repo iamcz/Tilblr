@@ -5,6 +5,9 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
   },
 
   initialize: function (options) {
+    // this.model = options.model;
+    // this.view = options.view;
+    // this.user = options.user;
     this.blog = options.blog;
     this.blogs = options.blogs;
 
@@ -12,14 +15,12 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
   },
 
   setupViews: function () {
+    
     this._containerView = new Tilblr.Views.ContainerView({
       el: "body",
       collection: this.blogs,
       model: this.model
     });
-
-    //var blogView = new Tilblr.Views.BlogShow({model: this.blog});
-    //this._containerView.addSubview()
   },
 
   postIndex: function () {
@@ -28,6 +29,7 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
       el: "#blog",
       model: this.blog
     });
+    this.model.fetch();
   },
 
   newBlog: function () {
