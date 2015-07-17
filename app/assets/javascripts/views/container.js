@@ -9,7 +9,8 @@ Tilblr.Views.ContainerView = Backbone.CompositeView.extend({
 
     var profile = new Tilblr.Views.ProfileView({
       el: "#profile-nav",
-      collection: this.collection
+      collection: this.collection,
+      model: this.model
     });
     this.collection.fetch();
 

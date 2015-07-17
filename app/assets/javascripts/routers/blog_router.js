@@ -14,7 +14,8 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
   setupViews: function () {
     this._containerView = new Tilblr.Views.ContainerView({
       el: "body",
-      collection: this.blogs
+      collection: this.blogs,
+      model: this.model
     });
 
     //var blogView = new Tilblr.Views.BlogShow({model: this.blog});
