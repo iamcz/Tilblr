@@ -50,7 +50,7 @@ Tilblr.Models.Blog = Backbone.Model.extend({
   },
 
   followFor: function (blog) {
-    return this.follows().getOrFetch({followed_id: blog.id})
+    return this.follows().findOrFetch({followed_id: blog.id})
   },
 
   ownedByCurrentUser: function () {

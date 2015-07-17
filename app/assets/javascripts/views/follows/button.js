@@ -1,6 +1,6 @@
 Tilblr.Views.FollowButton = Backbone.View.extend({
   tagName: "button",
-  className: "follow-button",
+  className: "follow",
   events: {
     "click": "toggleFollow"
   },
@@ -28,7 +28,7 @@ Tilblr.Views.FollowButton = Backbone.View.extend({
       this.model.save({}, {wait: true});
     } else {
       this.model.destroy({
-        wait: true;
+        wait: true,
         success: function () {
           var followed_id = this.model.get("followed_id");
           this.model.clear();

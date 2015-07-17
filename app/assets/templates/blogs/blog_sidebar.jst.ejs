@@ -2,7 +2,7 @@
   <h1><%= blog.escape("title") %></h1>
 
   <% if (!blog.ownedByCurrentUser()) { %>
-    <button id="follow">Follow</button>
+    <section class="follow-container"></section>
   <% }; %>
 </header>
 
