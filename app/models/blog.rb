@@ -10,6 +10,8 @@ class Blog < ActiveRecord::Base
   has_many :follower_follows, class_name: "Follow", foreign_key: :followed_id, inverse_of: :followed
   has_many :follower_blogs, through: :follower_follows, source: :follower
 
+  has_many :feed_posts, through: :followed_blogs, source: :posts
+
   def follow(blog) 
     follow = Follow.new(follower_id: self.id, followed_id: blog.id)
     follow.save
@@ -24,5 +26,9 @@ class Blog < ActiveRecord::Base
     # follow.destroy if follow
 
     # follow
+  end
+
+  def feed
+    feed_posts.union(posts)
   end
 end

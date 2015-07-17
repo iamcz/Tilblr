@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :blogs, only: [:index, :show] do 
       resource :follow, only: [:show, :create, :destroy]
+      resource :feed, only: :show
     end
 
     resources :posts, only: [:show, :create, :update, :destroy]
