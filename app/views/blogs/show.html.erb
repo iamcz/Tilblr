@@ -6,15 +6,15 @@ $(function () {
   var blogId = <%= @blog.id %>;
   var currentUserId = <%= logged_in? ? current_user.id : "undefined" %>;
 
-  Tilblr.initialize(blogId, currentUserId);
+  // Tilblr.initialize(blogId, currentUserId);
 
-  // var blog = new Tilblr.Models.Blog({id: feedId});
-  // var blogView = new Tilblr.Views.BlogShow({model: feed});
-  //
-  // Tilblr.initialize({
-  //   model: feed,
-  //   view: feedView,
-  //   userId: currentUserId
-  // });
+  var blog = new Tilblr.Models.Blog({id: blogId});
+  var blogView = new Tilblr.Views.BlogShow({model: blog});
+
+  Tilblr.initialize({
+    model: blog,
+    view: blogView,
+    userId: currentUserId
+  });
 });
 </script>

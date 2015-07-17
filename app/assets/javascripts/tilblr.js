@@ -4,18 +4,16 @@ window.Tilblr = {
   Views: {},
   Routers: {},
 
-  initialize: function(blogId, currentUserId) {
-    var blogs = new Tilblr.Collections.Blogs();
-    var blog = blogs.getOrFetch(blogId);
+  initialize: function(options) {
+    var currentUserId = options.userId;
+    var blog = options.model;
 
     // Not sure where this should be done
     Tilblr.Models.currentUser = new Tilblr.Models.User({id: currentUserId});
 
-    // Needs a Current User and a Model (feed / blog)
     Tilblr.Models.currentUser.fetch({
       success: function () {
         new Tilblr.Routers.BlogRouter({
-          blogs: blogs,
           blog: blog
         });
 

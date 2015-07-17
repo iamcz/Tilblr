@@ -1,11 +1,12 @@
 Tilblr.Routers.BlogRouter = Backbone.Router.extend({
   routes: {
     "": "postIndex",
+    "post-:id": "postIndex",
     "new/blog": "newBlog"
   },
 
   initialize: function (options) {
-    // this.model = options.model;
+    this.model = options.model;
     // this.view = options.view;
     // this.user = options.user;
     this.blog = options.blog;
@@ -18,7 +19,6 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
     
     this._containerView = new Tilblr.Views.ContainerView({
       el: "body",
-      // collection: this.blogs,
       model: Tilblr.Models.currentUser
     });
   },
