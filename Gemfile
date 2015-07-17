@@ -34,6 +34,7 @@ gem 'bcrypt', '~> 3.1.7', require: true
 
 gem 'backbone-on-rails'
 gem 'faker'
+gem 'active_record_union'
 
 group :development, :test do
   gem 'byebug'
