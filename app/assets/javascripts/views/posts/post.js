@@ -8,12 +8,12 @@ Tilblr.Views.PostView = Backbone.View.extend({
   events: {
     "click .cancel": "showView",
     "click .edit-post": "editView",
-    "click .destroy-post": "destroyPost",
-    "click .submit": "showView"
+    "click .destroy-post": "destroyPost"
   },
 
   initialize: function () {
     this.showView();
+    this.listenTo(this.model, "sync", this.showView);
   },
 
   editView: function () {
