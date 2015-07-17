@@ -12,7 +12,7 @@ Tilblr.Views.ContainerView = Backbone.CompositeView.extend({
       collection: this.collection,
       model: this.model
     });
-    this.collection.fetch();
+    //this.collection.fetch();
 
     this._swapDropdown(profile);
   },

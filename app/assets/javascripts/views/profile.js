@@ -17,8 +17,11 @@ Tilblr.Views.ProfileView = Backbone.View.extend({
     this.$("#profile-blogs").empty();
 
     this.collection.each(function (blog) {
-      var profileBlogItem = new Tilblr.Views.ProfileBlogItem({model: blog});
-      this.$("#profile-blogs").append(profileBlogItem.render().$el);
+      var $blogLink = $("<a>");
+      $blogLink.attr({"href": "/blogs/" + blog.id});
+      this.$("#profile-blogs").append($blogLink);
+      // var profileBlogItem = new Tilblr.Views.ProfileBlogItem({model: blog});
+      // this.$("#profile-blogs").append(profileBlogItem.render().$el);
     });
   },
 
@@ -30,4 +33,4 @@ Tilblr.Views.ProfileView = Backbone.View.extend({
     this.stopListening();
     this.$el.removeClass("visible");
   }
-})
+});
