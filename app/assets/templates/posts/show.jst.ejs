@@ -1,4 +1,6 @@
 <h1><%= post.escape("title") %></h1> 
 <p><%= post.escape("body") %></p>
-<button class="edit-post">Edit</button>
-<button class="destroy-post">Delete</button>
+<% if (Tilblr.Models.currentUser.ownsPost(post)) { %>
+  <button class="edit-post">Edit</button>
+  <button class="destroy-post">Delete</button>
+<% }; %>
