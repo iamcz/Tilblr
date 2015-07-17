@@ -113,7 +113,7 @@
 }
 
 .post button:not(.create-post),
-button#follow {
+.follow {
 	padding: 5px 10px;
 	border-radius: 2px;
 	font-size: .8em;
@@ -128,7 +128,7 @@ button#follow {
 }
 
 .edit-post,
-#follow {
+.follow {
 	background: #529ECC;
 }
 

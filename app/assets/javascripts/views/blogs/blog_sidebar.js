@@ -19,7 +19,6 @@ Tilblr.Views.BlogSidebar = Backbone.CompositeView.extend({
     var follow = Tilblr.Models.currentUser.activeBlog().followFor(this.model);
 
     var followButton = new Tilblr.Views.FollowButton({model: follow});
-    debugger;
     this.addSubview(".follow-container", followButton);
   }
 });
