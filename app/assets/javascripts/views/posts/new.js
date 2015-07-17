@@ -21,6 +21,7 @@ Tilblr.Views.NewPost = Backbone.View.extend({
   formView: function () {
     this.$el.addClass("active");
     var newPost = new Tilblr.Models.Post();
+    newPost.blog().set(this.model.attributes);
     var postForm = new Tilblr.Views.PostForm({
       model: newPost,
       collection: this.collection
