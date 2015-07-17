@@ -3,19 +3,29 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	padding: 10px 0 10px 10px;
 }
 
 #header-logo {
 	font-size: 1.6em;
 	font-weight: 700;
 	float: left;
-	padding: 5px 10px;
+}
+
+#nav-search:before {
+	content: "🔍";
+}
+
+#nav-search {
+	margin: 0 10px;
+	float: left;
 }
 
 .login-link, 
 .register-link, 
 #profile {
 	float: right;
+	margin-left: 10px;
 }
 
 #profile {
