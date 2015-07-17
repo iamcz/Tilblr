@@ -9,10 +9,10 @@ Tilblr is a clone of Tumblr built on Rails and Backbone. It is geared towards
 users who are looking to publish content about their educational growth.
 
 Without any blogs users can:
-- [ ] Create accounts
-- [ ] Log in
-- [ ] Create blog posts
-- [ ] View blogs and posts
+- [x] Create accounts
+- [x] Log in
+- [x] Create blog posts
+- [x] View blogs and posts
 - [ ] Subscribe to blogs
 - [ ] View a feed of subscribed blogs
 - [ ] Search for blogs
@@ -42,16 +42,18 @@ able to navigate to a blog show page and create posts.
 
 [Details][phase-two]
 
-### Phase III: Advanced Posts (~2 days)
-Allow users to write more robust posts with a markdown editor. Allow for file 
-upload of figures (images) to be embedded in posts. I plan on using some 
-combination of `marked` and `Markdown-js` for the markdown form and 
-`filepicker.io` for image upload.
-
 [Details][phase-three]
 
-### Phase IV: Follows and Blog Dashboard (~1-2 days)
-Add a follow button to all blogs except the user's active blog. This will be 
+### Phase III: Follows and Blog Dashboard (~1-2 days)
+Outline:
+* Create Follows
+* Follow Button View (Backbone)
+* Following Page (Backbone)
+  * Blog List
+* Dashboard View (Backbone)
+  * similar to blog show view with a different collection.
+
+Add a follow button to all blogs except the user's blogs. This will be 
 slightly different from tumblr's following system because blogs will follow
 other blogs instead of users following blogs. The dashboard view will display
 all posts from the blogs followed by the users active blog. Reuse the blog show
@@ -60,7 +62,18 @@ action.
 
 [Details][phase-four]
 
-### Phase V: Searching (~2 days) 
+### Phase IV: Searching (~2 days) 
+Outline:
+* Create Tags
+* Search Controller (API)
+* Search Bar View (Backbone)
+* Search View (Rails)
+* Search View (Backbone)
+  * Search Bar
+  * Search Results
+    * Blog Results (contains blog item views)
+    * Post Results (contains post item views)
+
 Add a search bar to the header partial and a route for search. Users will be
 able to serach by tags and both blog ans post results will be given. Add a 
 SearchView composite view, with a BlogList containing BlogItems and a PostList 
@@ -69,6 +82,7 @@ containing Post Items.
 [Details][phase-five]
 
 ### Bonus Features (TBD)
+- [ ] Robust posting (Markdown and MathML)
 - [ ] "Like" button and counter for posts
 - [ ] Pagination/infinite scroll
 - [ ] Reblogging
