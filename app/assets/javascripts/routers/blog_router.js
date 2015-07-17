@@ -29,7 +29,7 @@ Tilblr.Routers.BlogRouter = Backbone.Router.extend({
       el: "#blog",
       model: this.blog
     });
-    this.model.fetch();
+    //this.model.fetch();
   },
 
   newBlog: function () {
