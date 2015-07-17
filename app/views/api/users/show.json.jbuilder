@@ -12,3 +12,7 @@ json.active_blog do
     json.extract! follower, :id, :follower_id, :followee_id
   end
 end
+
+json.blogs @user.blogs do |blog|
+  json.extract! blog, :id, :title
+end
