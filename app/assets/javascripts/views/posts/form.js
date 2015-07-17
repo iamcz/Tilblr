@@ -33,7 +33,6 @@ Tilblr.Views.PostForm = Backbone.View.extend({
       wait: true,
       success: function () {
         posts.add(post);
-        debugger;
       },
       error: function () {
         this.enableForm();
