@@ -11,12 +11,16 @@ class Blog < ActiveRecord::Base
   has_many :follower_blogs, through: :follower_follows, source: :follower
 
   def follow(blog) 
-    follow = Follow.new(follower_id: self.id, followee_id: blog.id)
+    follow = Follow.new(follower_id: self.id, followed_id: blog.id)
     follow.save
+
+    follow
   end
 
   def unfollow(blog) 
-    follow = self.follows_follows.find(blog.id)
+    follow = self.followed_follows.find(blog.id)
     follow.destroy
+
+    follow
   end
 end

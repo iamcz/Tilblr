@@ -4,8 +4,8 @@ class Api::UsersController < ApplicationController
       .includes(
         :blogs, 
         :active_blog => [ 
-          :follows_follows, 
-          :followers_follows 
+          :followed_follows, 
+          :follower_follows 
         ]
       ).find(params[:id])
   end
