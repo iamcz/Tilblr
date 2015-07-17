@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :ensure_logged_in
+
   def show
     @blog = Blog.find(params[:id])
 
