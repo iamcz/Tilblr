@@ -9,7 +9,7 @@ $(function () {
   // Tilblr.initialize(blogId, currentUserId);
 
   var blog = new Tilblr.Models.Blog({id: blogId});
-  var blogView = new Tilblr.Views.BlogShow({model: blog});
+  var blogView = Tilblr.Views.BlogShow;
 
   Tilblr.initialize({
     model: blog,

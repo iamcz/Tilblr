@@ -6,7 +6,8 @@ window.Tilblr = {
 
   initialize: function(options) {
     var currentUserId = options.userId;
-    var blog = options.model;
+    var model = options.model;
+    var view = options.view;
 
     // Not sure where this should be done
     Tilblr.Models.currentUser = new Tilblr.Models.User({id: currentUserId});
@@ -14,7 +15,8 @@ window.Tilblr = {
     Tilblr.Models.currentUser.fetch({
       success: function () {
         new Tilblr.Routers.BlogRouter({
-          blog: blog
+          model: model,
+          view: view
         });
 
         Backbone.history.start();
