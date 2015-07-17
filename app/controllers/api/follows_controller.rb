@@ -1,4 +1,11 @@
 class Api::FollowsController < ApplicationController
+  def show
+    @follow = Follow.find_or_initialize_by(
+      follower_id: current_user.active_blog.id,
+      followed_id: params[:id]
+    )
+  end
+
   def create
     @blog = Blog.where.not(user_id: current_user.id).find(params[:blog_id])
 
