@@ -1,6 +1,6 @@
 class Api::FollowsController < ApplicationController
   def create
-    @blog = Blog.where.not(user_id: current_user.id).find(params[:id])
+    @blog = Blog.where.not(user_id: current_user.id).find(params[:blog_id])
 
     current_user.active_blog.follow(@blog)
     render json: nil

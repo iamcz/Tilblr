@@ -14,6 +14,11 @@ class User < ActiveRecord::Base
   has_many :posts, through: :blogs, source: :posts
   belongs_to :active_blog, class_name: "Blog", foreign_key: :active_blog_id, inverse_of: :active_user
 
+  has_many :followed_follows, class_name: "Follow", foreign_key: :follower_id, inverse_of: :follower
+  has_many :followed_blogs, through: :followed_follows, source: :followed
+  has_many :follower_follows, class_name: "Follow", foreign_key: :followee_id, inverse_of: :followee
+  has_many :follower_blogs, through: :follower_follows, source: :follower
+
   def self.find_by_credentials(email, password) 
     user = User.find_by_email(email)
     return unless user

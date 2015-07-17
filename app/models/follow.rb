@@ -1,5 +1,5 @@
 class Follow < ActiveRecord::Base
   validates :follower_id, :followee_id, presence: true
-  belongs_to :follower, class_name: "Blog", foreign_key: :follower_id, inverse_of: :follows_follows
-  belongs_to :followee, class_name: "Blog", foreign_key: :followee_id, inverse_of: :followers_follows
+  belongs_to :follower, class_name: "Blog", foreign_key: :follower_id, inverse_of: :followed_follows
+  belongs_to :followed, class_name: "Blog", foreign_key: :followee_id, inverse_of: :follower_follows
 end
