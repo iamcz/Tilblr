@@ -1,7 +1,7 @@
 Tilblr.Views.FeedSidebar = Backbone.CompositeView.extend({
   template: JST["feeds/sidebar"],
   tagName: "section",
-  id: "feed-sidebar",
+  id: "feed-info",
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render)

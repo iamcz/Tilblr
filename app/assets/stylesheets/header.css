@@ -1,10 +1,15 @@
 #main-header {
+	background: #CCC;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
 #header-logo {
-	font-size: 1.4em;
+	font-size: 1.6em;
 	font-weight: 700;
 	float: left;
+	padding: 5px 10px;
 }
 
 .login-link, 

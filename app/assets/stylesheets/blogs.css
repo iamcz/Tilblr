@@ -32,12 +32,14 @@
 	float: left;
 }
 
-#blog #blog-sidebar {
+#blog-sidebar,
+#feed-sidebar {
 	width: 230px;
 	float: right;
 }
 
-#blog-info {
+#blog-info,
+#feed-info {
 	background: #EEE;
 	padding: 5px 10px;
 	border-radius: 5px;
