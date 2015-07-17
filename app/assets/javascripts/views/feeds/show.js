@@ -1,5 +1,5 @@
 Tilblr.Views.FeedShow = Backbone.CompositeView.extend({
-  template: JST["blogs/show"],
+  template: JST["feeds/show"],
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
@@ -8,16 +8,16 @@ Tilblr.Views.FeedShow = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template({blog: this.model}));
 
-    // this.addSidebar();
+    this.addSidebar();
     this.addPosts();
 
     return this;
   },
 
-  // addSidebar: function () {
-  //   var sidebarView = new Tilblr.Views.BlogSidebar({model: this.model});
-  //   this.addSubview("#blog-sidebar", sidebarView);
-  // },
+  addSidebar: function () {
+    var sidebarView = new Tilblr.Views.FeedSidebar({model: this.model});
+    this.addSubview("#feed-sidebar", sidebarView);
+  },
 
   addPosts: function () {
     var postsView = new Tilblr.Views.PostsIndex({
