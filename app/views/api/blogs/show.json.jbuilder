@@ -1,9 +1,7 @@
 json.extract! @blog, :id, :title
 
-json.posts do 
-  json.array! @blog.posts do |post|
-    json.extract! post, :id, :title, :body, :created_at
-  end
+json.posts @blog.posts do |post|
+  json.extract! post, :id, :blog_id, :title, :body, :created_at
 end
 
 json.owner do 

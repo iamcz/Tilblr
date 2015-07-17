@@ -25,5 +25,11 @@ Tilblr.Models.User = Backbone.Model.extend({
     this._blogs = this._blogs || new Tilblr.Collections.Blogs();
 
     return this._blogs;
+  },
+
+  ownsPost: function (post) {
+    var blogIds = this.blogs().map(function (blog) { return blog.id });
+
+    return _(blogIds).contains(post.get("blog_id"));
   }
 });
