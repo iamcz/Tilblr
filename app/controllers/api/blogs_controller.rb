@@ -4,6 +4,6 @@ class Api::BlogsController < ApplicationController
   end
 
   def show
-    @blog = Blog.includes(:owner, :posts).find(params[:id])
+    @blog = Blog.includes(:owner, :posts => :blog).find(params[:id])
   end
 end

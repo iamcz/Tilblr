@@ -1,3 +1,4 @@
+<h6><%= post.blog().escape("title") %></h6>
 <h1><%= post.escape("title") %></h1> 
 <p><%= post.escape("body") %></p>
 <% if (Tilblr.Models.currentUser.ownsPost(post)) { %>
