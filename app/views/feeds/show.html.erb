@@ -4,12 +4,14 @@
 <script>
 $(function () {
   // var blogId = <%= @blog.id %>;
-  // var currentUserId = <%= logged_in? ? current_user.id : "undefined" %>;
 
   // Tilblr.initialize(blogId, currentUserId);
 
+  var currentUserId = <%= logged_in? ? current_user.id : "undefined" %>;
+  var feedId = <%= @blog.id %>;
   var feed = new Tilblr.Models.Feed({id: feedId});
-  var feedView = new Tilblr.Views.FeedView({model: feed});
+  var feedView = Tilblr.Views.FeedShow;
+  //var feedView = new Tilblr.Views.FeedView({model: feed});
   
   Tilblr.initialize({
     model: feed,
