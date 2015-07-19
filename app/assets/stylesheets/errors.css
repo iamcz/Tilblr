@@ -1,0 +1,11 @@
+ul.errors {
+	border: 1px solid #C00;
+}
+
+ul.errors li {
+	font-size: 12px;
+	background: rgba(255, 0, 0, 0.1);
+	border: 1px solid #C00;
+	padding: 5px;
+}
+

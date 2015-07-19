@@ -1,0 +1,15 @@
+#main {
+	/*position: fixed;
+	top: 60px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;*/
+	margin-top: 60px;
+	height: calc(100% - 60px);
+}
+
+a:active,
+button:active,
+input[type="submit"]:active {
+	opacity: 0.9;
+}

@@ -40,7 +40,7 @@
 
 #blog-info,
 #feed-info {
-	background: #EEE;
+	background: #FFF;
 	padding: 5px 10px;
 	border-radius: 5px;
 }
@@ -70,7 +70,7 @@
 .post > button,
 .post > form,
 .post > section {
-	background: #EEE;
+	background: #FFF;
 	padding: 10px 20px;
 	border-radius: 5px;
 }

@@ -6,11 +6,13 @@
     <section id="nav-search">
       <input id="search-bar" type="text" name="search_term" val="" placeholder="Search Tilblr">
     </section>
-    <% unless logged_in? %>
-      <%= link_to "Log in", {controller: :sessions, action: :new}, { class: "login-link" } %>
-      <%= link_to "Sign Up", {controller: :users, action: :new}, { class: "register-link" } %>
-    <% else %>
-      <%= render 'header/profile' %>
-    <% end %>
+    <section id="header-buttons">
+      <% unless logged_in? %>
+        <%= link_to "Log in", {controller: :sessions, action: :new}, { class: "login-link" } %>
+        <%= link_to "Sign Up", {controller: :users, action: :new}, { class: "register-link" } %>
+      <% else %>
+        <%= render 'header/profile' %>
+      <% end %>
+    </section>
   </navbar>
 </header>

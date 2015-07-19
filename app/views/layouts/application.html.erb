@@ -10,7 +10,10 @@
 
 <%= render 'header/header' %>
 
-<%= yield %>
+
+<section id="main">
+  <%= yield %>
+</section>
 
 <% if logged_in? %>
   <%= render 'blogs/form' %>

@@ -1,11 +1,18 @@
 .register-form {
-	margin: 100px auto;
-	width: 350px;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -150px;
+	width: 500px;
+	height: 300px;
 }
 
 .register-form form {
 	width: 300px;
 	margin: 0 auto;
+	padding: 1px solid #CCC;
 }
 
 .register-form h1,
@@ -20,6 +27,26 @@
 
 .register-form input {
 	display: block;
-	width: 100%;
+	width: calc(100% - 20px);
+	padding: 10px;
 }
 
+.register-form input[type="submit"],
+.register-form a {
+	border-radius: 2px;
+}
+
+.register-form input#user_email,
+.register-form input#user_password {
+	border-bottom: 1px solid #CCC;
+}
+
+.register-form input[type="submit"] {
+	width: 100%;
+	border: none;
+	margin-top: 10px;
+	background: #559FCA;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 700;
+}

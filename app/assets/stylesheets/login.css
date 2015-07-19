@@ -1,6 +1,12 @@
 .login-form {
-	margin: 100px auto;
-	width: 350px;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -150px;
+	width: 500px;
+	height: 300px;
 }
 
 .login-form form {
@@ -20,10 +26,34 @@
 
 .login-form input {
 	display: block;
-	width: 100%;
+	width: calc(100% - 20px);
+	padding: 10px;
 }
 
-.login-form a {
+.login-form input[type="text"] {
+	border-bottom: 1px solid #CCC;
+}
+
+.login-form input[type="submit"],
+.login-form .register-link {
 	width: 100%;
+	border: none;
+	margin-top: 10px;
+	background: #559FCA;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.login-form input[type="submit"],
+.login-form a {
+	border-radius: 2px;
+}
+
+.login-form .register-link {
+	width: calc(100% - 20px);
+	background: #5ABB8B;
 	text-align: center;
+	display: block;
+	padding: 10px;
 }
