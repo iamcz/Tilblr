@@ -1,5 +1,5 @@
 Tilblr.Collections.BlogResults = Backbone.Collection.extend({
-  model: Tilblr.Models.Blog,
+  model: Tilblr.Models.Post,
   url: function () {
     return "/api/search"
   },
