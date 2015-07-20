@@ -1,13 +1,13 @@
 class Api::SearchesController < ApplicationController
   def show
-    tag = search_params[:tag]
     type = search_params[:type]
+    query = search_params[:query]
     case type
     when "post"
-      @results = Tag.find_by(name: tag).tagged_posts.includes(:blog)
+      @results = Tag.where("name LIKE ?", query).includes(:tagged_posts => :blog)
       render :post_results
     when "blog"
-      @results = Tag.find_by(name: tag).tagged_blogs.includes(:posts)
+      @results = Tag.where("name LIKE ?", query).includes( :tagged_blogs => :posts)
       render :blog_results
     end
   end
@@ -15,6 +15,6 @@ class Api::SearchesController < ApplicationController
   private
   
   def search_params
-    params.require(:search).permit(:tag, :type);
+    params.require(:search).permit(:type, :query);
   end
 end
