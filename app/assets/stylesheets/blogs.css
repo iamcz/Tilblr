@@ -19,8 +19,9 @@
 }
 
 #blog {
-	width: 900px;
+	width: 810px;
 	margin: 0 auto;
+	color: #444;
 }
 
 #blog > * {
@@ -28,7 +29,7 @@
 }
 
 #blog #posts-index {
-	width: 630px;
+	width: 540px;
 	float: left;
 }
 
@@ -40,9 +41,8 @@
 
 #blog-info,
 #feed-info {
-	background: #FFF;
-	padding: 5px 10px;
-	border-radius: 5px;
+	color: rgba(255, 255, 255, 0.498039);
+	font-size: 14px;
 }
 
 .follow-container {
@@ -72,8 +72,20 @@
 .post > section {
 	background: #FFF;
 	padding: 10px 20px;
-	border-radius: 5px;
+	border-radius: 3px;
 }
+
+/*
+.post .blog-avatar {
+	position: absolute;
+	top: -15px;
+	left: -110px;
+	height: 60px;
+	width: 60px;
+	border-radius: 4px;
+	background: #FFF;
+}
+*/
 
 .create-post.post,
 #post-form.post,
@@ -90,7 +102,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(54, 70, 93, 0.9);
 }
 
 #new-post .create-post {

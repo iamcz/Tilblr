@@ -20,10 +20,12 @@ html, body {
 
 body {
 	font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-	background: #EEE;
+	background: #36465D;
+	color: #FFF;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button, a {
 	cursor: pointer;
 }
 

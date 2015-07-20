@@ -1,10 +1,12 @@
 #main-header {
-	background: #EEE;
+	background: #36465D;
 	position: fixed;
 	top: 0;
 	width: calc(100% - 20px);
 	padding: 10px;
 	height: 40px;
+	color: #FFF;
+	border-bottom: 1px solid #505E72;
 }
 
 #header-logo {
@@ -23,6 +25,7 @@
 	height: 100%;
 	width: calc(100% - 300px);
 	vertical-align: bottom;
+	color: #444;
 }
 
 #nav-search input {
@@ -78,31 +81,44 @@
 
 #profile-nav {
 	display: none;
+	opacity: 0;
 	position: absolute;
 	right: 0px;
-	top: 60px;
-	background: #FFF;
-	width: 200px;
-	border: 1px solid #CCC;
-	border-radius: 4px;
-	color: black;
-}
-
-#profile-nav header {
-	background: #EEE;
-	border-bottom: 1px solid #CCC;
-	font-size: 10px;
-	padding: 2px 5px;
-}
-
-#profile-nav header.account {
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	top: 45px;
+	width: 240px;
+	color: #444;
 }
 
 #profile-nav.visible {
 	display: block;
 	z-index: 1;
+	opacity: 1;
+}
+
+#profile-nav header {
+	background: #F5F5F5;
+	border-bottom: 1px solid #CCC;
+	font-size: 11px;
+	color: rgb(136, 136, 136);
+	padding: 5px 20px 5px 10px
+}
+
+#profile-nav header.account {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+#profile-nav header.account {
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+#profile-nav #profile-blogs {
+	font-size: 14px;
+	font-weight: 700;
+	background: #FFF;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 }
 
 #profile-nav h6 {
@@ -119,6 +135,14 @@
 
 #profile-blogs li a {
 	display: block;
-	font-weight: 400;
 	padding: 3px 5px;
+}
+
+#profile-blogs li:last-child a {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#profile-blogs li a:hover {
+	background: #D4E3F4;
 }
