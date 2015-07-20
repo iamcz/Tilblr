@@ -1,8 +1,6 @@
 Tilblr.Routers.BlogRouter = Backbone.Router.extend({
   routes: {
-    "": "postIndex",
-    "post-:id": "postIndex",
-    "new/blog": "newBlog"
+    "": "postIndex"
   },
 
   initialize: function (options) {

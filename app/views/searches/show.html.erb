@@ -8,6 +8,14 @@ $(function () {
   queryObj = { query: "<%= @query %>" };
   var searchView = Tilblr.Views.SearchView;
   var blogResults = new Tilblr.Collections.BlogResults(queryObj);
-  var blogResults = new Tilblr.Collections.PostResults(queryObj);
+  var postResults = new Tilblr.Collections.PostResults(queryObj);
+  var currentUserId = <%= current_user.id %>;
+
+  new Tilblr.Routers.SearchRouter({
+    blogResults: blogResults,
+    postResults: postResults,
+    currentUserId: currentUserId
+  });
+  Backbone.history.start();
 });
 </script>
