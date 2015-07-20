@@ -9,6 +9,7 @@ Tilblr.Routers.SearchRouter = Backbone.Router.extend({
     Tilblr.Models.currentUser = new Tilblr.Models.User({id: options.currentUserId});
 
     this.setupContainer();
+    this.searchIndex();
   },
 
   setupContainer: function () {
@@ -20,8 +21,12 @@ Tilblr.Routers.SearchRouter = Backbone.Router.extend({
 
   searchIndex: function () {
     searchView = new Tilblr.Views.SearchView({
+      el: "#search",
       blogResults: this.blogResults,
       postResults: this.postResults
     });
+    debugger;
+    this.blogResults.fetch();
+    this.postResults.fetch();
   }
 })
