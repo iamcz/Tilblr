@@ -1,4 +1,6 @@
 class Blog < ActiveRecord::Base
+  include Taggable
+
   validates :title, :owner, presence: true
 
   belongs_to :owner, class_name: "User", foreign_key: :user_id, inverse_of: :blogs
