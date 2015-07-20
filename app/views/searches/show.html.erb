@@ -5,8 +5,9 @@
 
 <script>
 $(function () {
+  queryObj = { query: "<%= @query %>" };
   var searchView = Tilblr.Views.SearchView;
-  var blogResults = new Tilblr.Collections.BlogResults();
-  var blogResults = new Tilblr.Collections.PostResults();
+  var blogResults = new Tilblr.Collections.BlogResults(queryObj);
+  var blogResults = new Tilblr.Collections.PostResults(queryObj);
 });
 </script>
