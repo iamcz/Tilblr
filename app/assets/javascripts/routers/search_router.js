@@ -25,7 +25,6 @@ Tilblr.Routers.SearchRouter = Backbone.Router.extend({
       blogResults: this.blogResults,
       postResults: this.postResults
     });
-    debugger;
     this.blogResults.fetch();
     this.postResults.fetch();
   }
