@@ -10,14 +10,9 @@
 
 <%= render 'header/header' %>
 
-
 <section id="main">
   <%= yield %>
 </section>
-
-<% if logged_in? %>
-  <%= render 'blogs/form' %>
-<% end %>
 
 </body>
 </html>

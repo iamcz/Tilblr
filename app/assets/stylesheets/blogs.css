@@ -161,3 +161,42 @@
 	background: #529ECC;
 }
 
+#new-blog {
+	width: 900px;
+	margin: 100px auto;
+	padding: 20px;
+	background: #FFF;
+	color: #444;
+	border-radius: 10px;
+}
+
+#new-blog h2 {
+	font-size: 36px;
+	font-weight: 700;
+	margin: 20px 0;
+}
+
+#new-blog .input:first-child {
+	border-top: 1px solid #D7D7D7;
+}
+
+#new-blog .input {
+	border-bottom: 1px solid #D7D7D7;
+}
+
+#new-blog .input label {
+	float: left;
+	width: 120px;
+	padding: 20px;
+	vertical-align: center;
+	text-align: right;
+	background: #F5F5F5;
+}
+
+#new-blog .input input {
+	float: left;
+	padding: 5px;
+	margin: 14px;
+	width: 400px;
+	border: 1px solid #D7D7D7;
+}
