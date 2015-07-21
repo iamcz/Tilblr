@@ -6,7 +6,7 @@ Tilblr.Views.BlogSearch = Backbone.CompositeView.extend({
   render: function () {
     debugger;
     this.collection.each(function (blog) {
-      this.$el.append("here")
+      this
     }.bind(this))
   }
 });

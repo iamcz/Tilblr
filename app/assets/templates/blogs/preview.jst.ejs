@@ -1,0 +1,15 @@
+<a href="#">
+  <img src="#"></img>
+</a>
+
+<h2><%= blog.escape("title") %></h2>
+
+<ul class="post-previews">
+  <% blog.posts().each(function (post) { %>
+    <li class="post-preview">
+      <h4><%= post.escape("title") %></h4>
+      <p><%= post.escape("body") %></p>
+    </li>
+  <% }); %>
+</ul>
+
