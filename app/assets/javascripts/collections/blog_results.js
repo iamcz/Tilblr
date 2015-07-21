@@ -4,7 +4,7 @@ Tilblr.Collections.BlogResults = Backbone.Collection.extend({
     return "/api/search"
   },
   
-  initialize: function (options) {
+  initialize: function (models, options) {
     this.query = options.query;
   },
 

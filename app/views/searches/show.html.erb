@@ -1,14 +1,12 @@
 <section id="search">
-  <section id="blog-results"></section>
-  <seciton id="post-results"></seciton>
 </section>
 
 <script>
 $(function () {
   queryObj = { query: "<%= @query %>" };
   var searchView = Tilblr.Views.SearchView;
-  var blogResults = new Tilblr.Collections.BlogResults(queryObj);
-  var postResults = new Tilblr.Collections.PostResults(queryObj);
+  var blogResults = new Tilblr.Collections.BlogResults([], queryObj);
+  var postResults = new Tilblr.Collections.PostResults([], queryObj);
   var currentUserId = <%= current_user.id %>;
 
   new Tilblr.Routers.SearchRouter({
