@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :show, :create, :update, :destroy]
     resources :users, only: :show
 
+    get "feed_posts", to: "posts#feed_posts"
+
     resource :search, only: :show
   end
 end

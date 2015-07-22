@@ -32,6 +32,6 @@ class Blog < ActiveRecord::Base
 
   def feed
     followed_blog_posts.includes(:blog).to_a
-      .concat(posts.includes(:blog)).to_a
+      .concat(posts.includes(:blog).to_a)
   end
 end
