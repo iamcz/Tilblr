@@ -14,6 +14,8 @@ class Blog < ActiveRecord::Base
 
   has_many :followed_blog_posts, through: :followed_blogs, source: :posts
 
+  has_attached_file :avatar, :styles: { small: "64x64>" }, default_url: "/images/default_avatar.png"
+
   def follow(blog) 
     follow = Follow.new(follower_id: self.id, followed_id: blog.id)
     follow.save
