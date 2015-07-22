@@ -13,5 +13,13 @@
     placeholder="Your text here"><%= post.escape('body') %></textarea>
 </p>
 
+<p>
+	<input
+		type="text"
+		name="post[tag_names]"
+    value="<%= post.escape('tag_names') %>"
+    placeholder="Tag names (space separated)">
+</p>
+
 <button class="cancel">Cancel</button>
 <button class="submit">Submit</button>

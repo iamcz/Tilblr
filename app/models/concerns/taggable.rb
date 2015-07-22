@@ -7,7 +7,7 @@ module Taggable
   end
 
   def tag_names
-    tags.map(&:name)
+    tags.map(&:name).join(" ")
   end
 
   def tag_names=(tag_names) 
