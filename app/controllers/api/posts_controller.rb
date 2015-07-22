@@ -1,4 +1,8 @@
 class Api::PostsController < ApplicationController 
+  def index
+    debugger
+  end
+
   def show
     @post = post.find(params[:id])
   end
