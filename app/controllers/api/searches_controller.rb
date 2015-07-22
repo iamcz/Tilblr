@@ -4,10 +4,10 @@ class Api::SearchesController < ApplicationController
     query = search_params[:query]
     case type
     when "post"
-      @results = Tag.where("name LIKE ?", query).includes(:tagged_posts => :blog)
+      @results = Tag.where("name ~ ?", query).includes(:tagged_posts => :blog)
       render :post_results
     when "blog"
-      @results = Tag.where("name LIKE ?", query).includes( :tagged_blogs => :posts)
+      @results = Tag.where("name ~ ?", query).includes( :tagged_blogs => :posts)
       render :blog_results
     end
   end

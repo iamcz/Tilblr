@@ -15,7 +15,7 @@ module Taggable
 
     tag_names.split.each do |tag_name|
       tag = Tag.find_or_create_by(name: tag_name)
-      new_taggings << taggings.find_or_create_by(tag_id: tag.id)
+      new_taggings << Tagging.find_or_create_by(tag_id: tag.id, taggable_id: self.id)
     end
 
     self.taggings = new_taggings
