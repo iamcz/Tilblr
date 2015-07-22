@@ -1,6 +1,8 @@
 class Api::PostsController < ApplicationController 
   def index
-    @posts = []
+    @posts = Post.includes(:tags, :blog => :tags)
+      .where("blog_id = ?", params[:blog_id])
+      .page(params[:page].to_i).per(10)
   end
 
   def show

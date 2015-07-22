@@ -45,6 +45,8 @@ gem 'omniauth-google-oauth2'
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
 
+gem 'kaminari'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

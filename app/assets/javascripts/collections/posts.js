@@ -4,7 +4,7 @@ Tilblr.Collections.Posts = Backbone.Collection.extend({
 
   initialize: function (models, options) {
     this.blog = options.blog;
-    this.before = null;
+    this.page = 1;
   },
 
   comparator: function (thisPost, otherPost) {
@@ -22,9 +22,9 @@ Tilblr.Collections.Posts = Backbone.Collection.extend({
 
   fetch: function () {
     Backbone.Collection.prototype.fetch.call(this, {
-      data: { blog_id: this.blog.id, before: this.before },
+      data: { blog_id: this.blog.id, page: this.page },
       success: function () {
-
+        this.page += 1;
       }.bind(this)
     });
   }
