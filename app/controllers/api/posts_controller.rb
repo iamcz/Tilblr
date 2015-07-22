@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController 
   def index
-    debugger
+    @posts = []
   end
 
   def show

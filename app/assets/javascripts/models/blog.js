@@ -32,7 +32,7 @@ Tilblr.Models.Blog = Backbone.Model.extend({
   },
 
   posts: function () {
-    this._posts = this._posts || new Tilblr.Collections.Posts();
+    this._posts = this._posts || new Tilblr.Collections.Posts([], {blog: this});
 
     return this._posts;
   },

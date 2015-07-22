@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       resource :feed, only: :show
     end
 
-    resources :posts, only: [:show, :create, :update, :destroy]
+    resources :posts, only: [:index, :show, :create, :update, :destroy]
     resources :users, only: :show
 
     resource :search, only: :show

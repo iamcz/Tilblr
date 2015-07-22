@@ -3,6 +3,7 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.collection, "add remove", this.render);
+    this.collection.fetch();
   },
 
   render: function () {
