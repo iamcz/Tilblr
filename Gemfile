@@ -39,6 +39,7 @@ gem 'active_record_union'
 gem 'figaro'
 
 gem 'omniauth'
+gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'byebug'

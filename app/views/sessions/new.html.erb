@@ -6,5 +6,6 @@
     <%= f.password_field :password, placeholder: "Password" %>
     <%= f.submit "Log in" %>
     <%= link_to "Sign Up", {controller: :users, action: :new}, {class: "register-link"} %>
+    <%= link_to "Sign In With Twitter", "/auth/twitter" %>
   <% end %>
 </section>
