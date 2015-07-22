@@ -1,10 +1,8 @@
 Tilblr.Collections.PostResults = Backbone.Collection.extend({
   model: Tilblr.Models.Post,
-  url: function () {
-    return "/api/search"
-  },
+  url: "api/search",
   
-  initialize: function (options) {
+  initialize: function (models, options) {
     this.query = options.query;
   },
 

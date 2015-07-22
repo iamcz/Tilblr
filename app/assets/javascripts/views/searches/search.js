@@ -2,7 +2,7 @@ Tilblr.Views.SearchView = Backbone.CompositeView.extend({
   template: JST["searches/search"],
   initialize: function (options) {
     this.blogResults = options.blogResults;
-    this.searchResults = options.postResults;
+    this.postResults = options.postResults;
   },
 
   render: function () {
@@ -22,7 +22,7 @@ Tilblr.Views.SearchView = Backbone.CompositeView.extend({
 
   addPostResults: function () {
     var postSearch = new Tilblr.Views.PostSearch({
-      collection: this.blogResults
+      collection: this.postResults
     });
 
     this.addSubview("#search", postSearch);

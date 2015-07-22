@@ -7,6 +7,12 @@ Tilblr.Views.PostSearch = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template());
 
+    debugger;
+    this.collection.each(function (post) {
+      var postView = new Tilblr.Views.PostShow({model: post});
+      this.addSubview("#post-list", postPreview);
+    });
+
     return this;
   }
 });
