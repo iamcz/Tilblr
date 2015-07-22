@@ -36,6 +36,8 @@ gem 'backbone-on-rails'
 gem 'faker'
 gem 'active_record_union'
 
+gem 'figaro'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
