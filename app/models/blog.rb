@@ -14,7 +14,7 @@ class Blog < ActiveRecord::Base
 
   has_many :followed_blog_posts, through: :followed_blogs, source: :posts
 
-  has_attached_file :avatar, :styles: { small: "64x64>" }, default_url: "/images/default_avatar.png"
+  has_attached_file :avatar, styles: { small: "64x64>" }, default_url: "/images/default_avatar.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   def follow(blog) 

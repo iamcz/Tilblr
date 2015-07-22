@@ -1,4 +1,5 @@
-<%= form_for blog do |f| %>
+<%= form_for blog, html: { multipart: true } do |f| %>
+  <%= f.file_field :avatar %>
   <section class="input group">
     <%= f.label :title %>
     <%= f.text_field :title %>
