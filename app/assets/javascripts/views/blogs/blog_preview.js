@@ -1,5 +1,7 @@
 Tilblr.Views.BlogPreview = Backbone.View.extend({
   template: JST["blogs/preview"],
+  tagName: "li",
+  className: "blog-preview",
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);

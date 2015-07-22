@@ -1,0 +1,51 @@
+#search #blog-list {
+	padding: 20px;
+	height: 320px;
+	width: calc(100% - 40px);
+}
+
+.blog-preview {
+	height: 280px;
+	width: 280px;
+	padding: 20px 10px;
+	float: left;
+	margin-right: 0 10px;
+	background: #FFF;
+	color: #444;
+	border-radius: 3px;
+}
+
+.blog-preview .blog-avatar {
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+
+.blog-preview h2 {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.post-previews {
+	width: 100%;
+	font-size: 11px;
+}
+
+.post-preview {
+	height: 86px;
+	width: 86px;
+	padding: 2px;
+	border-radius: 2px;
+	float: left;
+}
+
+.post-preview:not(:last-child) {
+	margin-right: 5px;
+}
+
+.post-preview h4 {
+	font-weight: 700;
+}
