@@ -27,4 +27,8 @@ class ApplicationController < ActionController::Base
   def ensure_logged_in
     redirect_to new_session_url if !logged_in?
   end
+
+  def redirect_logged_in
+    redirect_to current_user.active_blog if logged_in?
+  end
 end

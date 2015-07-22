@@ -35,7 +35,8 @@
 }
 
 .login-form input[type="submit"],
-.login-form .register-link {
+.login-form .register-link,
+.login-form .google-login {
 	width: 100%;
 	border: none;
 	margin-top: 10px;
@@ -53,6 +54,14 @@
 .login-form .register-link {
 	width: calc(100% - 20px);
 	background: #5ABB8B;
+	text-align: center;
+	display: block;
+	padding: 10px;
+}
+
+.login-form .google-login {
+	width: calc(100% - 20px);
+	background: #D9442F;
 	text-align: center;
 	display: block;
 	padding: 10px;
