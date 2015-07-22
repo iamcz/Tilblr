@@ -6,7 +6,6 @@ Tilblr.Views.BlogPreview = Backbone.View.extend({
   },
 
   render: function () {
-    debugger;
     this.$el.html(this.template({blog: this.model}));
 
     return this;

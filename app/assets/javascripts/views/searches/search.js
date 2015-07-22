@@ -1,22 +1,30 @@
 Tilblr.Views.SearchView = Backbone.CompositeView.extend({
+  template: JST["searches/search"],
   initialize: function (options) {
     this.blogResults = options.blogResults;
     this.searchResults = options.postResults;
   },
 
   render: function () {
+    this.$el.html(this.template());
+
+    this.addBlogResults();
+    this.addPostResults();
+  },
+
+  addBlogResults: function () {
     var blogSearch = new Tilblr.Views.BlogSearch({
-      el: "#blog-results",
       collection: this.blogResults
     });
 
-    this.addSubview("#blog-results", blogSearch)
+    this.addSubview("#search", blogSearch);
+  },
 
+  addPostResults: function () {
     var postSearch = new Tilblr.Views.PostSearch({
-      el: "#post-results",
       collection: this.blogResults
     });
 
-    this.addSubview("#post-results", postSearch);
+    this.addSubview("#search", postSearch);
   }
 })

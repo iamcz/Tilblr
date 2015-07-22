@@ -5,6 +5,8 @@ Tilblr.Views.BlogSearch = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    this.$el.html(this.template());
+
     this.collection.each(function (blog) {
       var blogPreview = new Tilblr.Views.BlogPreview({model: blog});
       this.addSubview("#blog-list", blogPreview);
