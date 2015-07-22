@@ -1,5 +1,5 @@
 <figure class="blog-avatar">
-  <img src="<%= post.blog().avatar_url %>">
+  <img src="<%= post.blog().get('avatar_url') %>">
 </figure>
 <h6><%= post.blog().escape("title") %></h6>
 <h1><%= post.escape("title") %></h1> 

@@ -1,6 +1,7 @@
 #main-header {
 	background: #36465D;
 	position: fixed;
+	z-index: 1;
 	top: 0;
 	width: calc(100% - 20px);
 	padding: 10px;

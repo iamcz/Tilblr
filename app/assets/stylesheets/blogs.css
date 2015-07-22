@@ -65,6 +65,7 @@
 }
 
 .post {
+	position: relative;
 }
 
 .post > button,
@@ -75,17 +76,19 @@
 	border-radius: 3px;
 }
 
-/*
 .post .blog-avatar {
 	position: absolute;
-	top: -15px;
-	left: -110px;
+	margin: 0;
+	top: 0px;
+	left: -70px;
+}
+
+.post .blog-avatar img {
+	display: block;
 	height: 60px;
 	width: 60px;
-	border-radius: 4px;
-	background: #FFF;
+	border-radius: 3px;
 }
-*/
 
 .create-post.post,
 #post-form.post,
