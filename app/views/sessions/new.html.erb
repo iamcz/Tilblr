@@ -7,5 +7,6 @@
     <%= f.submit "Log in" %>
     <%= link_to "Sign Up", {controller: :users, action: :new}, {class: "register-link"} %>
     <%= link_to "Sign In With Twitter", "/auth/twitter" %>
+    <%= link_to "Sign In With Google", "/auth/google_oauth2" %>
   <% end %>
 </section>

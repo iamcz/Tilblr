@@ -19,7 +19,16 @@ class SessionsController < ApplicationController
     redirect_to new_session_url
   end
 
+  def omniauth
+    debugger;
+    @user = User.find_or_create_by()
+  end
+
   private
+
+  def auth_hash
+    request.env['omniauth.auth']
+  end
 
   def session_params
     params.require(:user).permit(:email, :password)

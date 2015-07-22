@@ -40,6 +40,7 @@ gem 'figaro'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'byebug'

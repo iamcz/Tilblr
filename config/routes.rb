@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :blogs, only: [:show, :new, :create]
   resources :feeds, only: :show
 
+  get "auth/:provider/callback", to: "sessions#omniauth"
+
   namespace :api, defaults: { format: :json } do
     resources :blogs, only: [:index, :show] do 
       resource :follow, only: [:show, :create, :destroy]
