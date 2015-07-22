@@ -15,6 +15,7 @@ Tilblr.Views.FeedShow = Backbone.CompositeView.extend({
   },
 
   addSidebar: function () {
+    var recommendedBlogs = new Tilblr.Collections.RecommendedBlogs();
     var sidebarView = new Tilblr.Views.FeedSidebar({model: this.model});
     this.addSubview("#feed-sidebar", sidebarView);
   },
