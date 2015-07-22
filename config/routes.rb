@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: "users#new"
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
-  resource :search, only: :show
+  resource :search, only: :create
 
   resources :blogs, only: [:show, :new, :create]
   resources :feeds, only: :show

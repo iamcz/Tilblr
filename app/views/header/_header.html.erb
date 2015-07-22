@@ -4,7 +4,9 @@
       <a href="#">til</a>
     </h1>
     <section id="nav-search">
-      <input id="search-bar" type="text" name="search_term" val="" placeholder="Search Tilblr">
+      <%= form_for :search, url: "/search" do |f| %>
+        <%= f.text_field :q, id: "search-bar", placeholder: "Search Tilblr" %>
+      <% end %>
     </section>
     <section id="header-buttons">
       <% unless logged_in? %>
