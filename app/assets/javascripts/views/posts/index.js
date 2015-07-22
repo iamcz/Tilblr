@@ -4,6 +4,7 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
   initialize: function () {
     this.listenTo(this.collection, "add remove", this.render);
     this.collection.fetch();
+    $(window).on("scroll", this.fetchMorePosts.bind(this));
   },
 
   render: function () {
@@ -34,6 +35,13 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
       collection: this.collection
     });
     this.addSubview("#posts", newPostView);
+  },
+
+  fetchMorePosts: function (event) {
+    console.log($(window).scrollTop(), $(document).height() - $(window).height())
+    if ($(window).scrollTop() === $(document).height() - $(window).height()) {
+      this.collection.fetch();
+    }
   }
 })
 

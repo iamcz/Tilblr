@@ -22,6 +22,7 @@ Tilblr.Collections.Posts = Backbone.Collection.extend({
 
   fetch: function () {
     Backbone.Collection.prototype.fetch.call(this, {
+      remove: false,
       data: { blog_id: this.blog.id, page: this.page },
       success: function () {
         this.page += 1;
