@@ -49,3 +49,23 @@
 .post-preview h4 {
 	font-weight: 700;
 }
+
+#post-list section {
+	margin: 0 20px;
+	height: 280px;
+	width: 280px;
+	padding: 20px 10px;
+	border-radius: 3px;
+	background: #FFF;
+	color: #444;
+}
+
+#post-list h1 {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+}
+
+#post-list .blog-avatar {
+	display: none;
+}
