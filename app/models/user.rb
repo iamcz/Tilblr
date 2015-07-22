@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     BCrypt::Password.new(user.password_digest).is_password?(password) ? user : nil
   end
 
-  def self.find_or_create_by_auth_hash(auth_hash) do
+  def self.find_or_create_by_auth_hash(auth_hash)
     provider = auth_hash[:provider]
     uid = auth_hash[:uid]
     user = User.find_by(provider: provider, uid: uid)
