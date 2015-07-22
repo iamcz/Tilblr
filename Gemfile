@@ -42,6 +42,9 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 
+gem 'paperclip'
+gem 'aws-sdk', '~> 1.6'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
