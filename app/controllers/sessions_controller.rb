@@ -20,8 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def omniauth
-    debugger;
-    @user = User.find_or_create_by()
+    @user = User.find_or_create_by_auth_hash(auth_hash)
   end
 
   private
