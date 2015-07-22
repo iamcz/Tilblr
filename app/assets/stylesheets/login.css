@@ -52,7 +52,8 @@
 }
 
 .login-form .register-link {
-	width: calc(100% - 20px);
+	width: 280px;
+	margin: 10px auto;
 	background: #5ABB8B;
 	text-align: center;
 	display: block;
@@ -60,7 +61,8 @@
 }
 
 .login-form .google-login {
-	width: calc(100% - 20px);
+	width: 280px;
+	margin: 10px auto;
 	background: #D9442F;
 	text-align: center;
 	display: block;

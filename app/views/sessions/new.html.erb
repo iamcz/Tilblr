@@ -5,8 +5,6 @@
     <%= f.text_field :email, placeholder: "Email" %>
     <%= f.password_field :password, placeholder: "Password" %>
     <%= f.submit "Log in" %>
-    <%= link_to "Sign Up", {controller: :users, action: :new}, {class: "register-link"} %>
-    <%= link_to "Sign in with Google", "/auth/google_oauth2", class: "google-login" %>
   <% end %>
   <form action="/session" method="post" class="guest-login">
     <input type="hidden"
@@ -14,6 +12,8 @@
            value="<%= form_authenticity_token %>">
     <input type="hidden" name="user[email]" value="guest@tilblr.com">
     <input type="hidden" name="user[password]" value="password">
-    <input type="submit" value="Sign in as guest">
+    <input type="submit" value="Log in as guest">
   </form>
+  <%= link_to "Sign Up", {controller: :users, action: :new}, {class: "register-link"} %>
+  <%= link_to "Sign in with Google", "/auth/google_oauth2", class: "google-login" %>
 </section>
