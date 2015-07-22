@@ -38,6 +38,8 @@ gem 'active_record_union'
 
 gem 'figaro'
 
+gem 'omniauth'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
