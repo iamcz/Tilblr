@@ -20,9 +20,9 @@
     blog = user.blogs.new(title: title)
     blog.save
 
-    10.times do |j|
+    50.times do |j|
       title = "post-#{j}"
-      body = Faker::Lorem.paragraphs(1)
+      body = Faker::Lorem.paragraphs(2).join("\n")
       post = blog.posts.new(title: title, body: body)
       post.save
     end
