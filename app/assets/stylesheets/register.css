@@ -20,6 +20,10 @@
 	text-align: center;
 }
 
+.register-form .tilblr-description {
+	margin: 20px auto;
+}
+
 .register-form h1 {
 	font-size: 3em;
 	font-weight: 700;
@@ -29,6 +33,18 @@
 	display: block;
 	width: calc(100% - 20px);
 	padding: 10px;
+	background: #FFF;
+	color: #444;
+}
+
+.register-form .text-inputs > *:first-child input {
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.register-form .text-inputs > *:last-child input {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
 }
 
 .register-form input[type="submit"],

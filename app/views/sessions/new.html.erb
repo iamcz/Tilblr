@@ -2,8 +2,12 @@
   <h1>tilblr.</h1>
   <%= form_for :user, url: {controller: :sessions, action: :create} do |f| %>
     <%= render 'layouts/errors' %>
-    <%= f.text_field :email, placeholder: "Email" %>
-    <%= f.password_field :password, placeholder: "Password" %>
+
+    <section class="text-inputs">
+      <%= f.text_field :email, placeholder: "Email" %>
+      <%= f.password_field :password, placeholder: "Password" %>
+    </section>
+
     <%= f.submit "Log in" %>
   <% end %>
   <form action="/session" method="post" class="guest-login">

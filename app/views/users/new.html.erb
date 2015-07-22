@@ -1,12 +1,19 @@
 <section class="register-form">
   <h1>tilblr.</h1>
-  <p>Connect with a global learning community.</p>
-  <p>Share your educational growth.</p>
+  <section class="tilblr-description">
+    <p>Connect with a global learning community.</p>
+    <p>Share your educational growth.</p>
+  </section>
+
   <%= form_for @user do |f| %>
     <%= render 'layouts/errors' %>
-    <%= f.text_field :email, placeholder: "Email" %>
-    <%= f.password_field :password, placeholder: "Password" %>
-    <%= f.text_field :username, placeholder: "Username" %>
+
+    <section class="text-inputs">
+      <%= f.text_field :email, placeholder: "Email" %>
+      <%= f.password_field :password, placeholder: "Password" %>
+      <%= f.text_field :username, placeholder: "Username" %>
+    </section>
+
     <%= f.submit "Sign Up" %>
   <% end %>
 </section>

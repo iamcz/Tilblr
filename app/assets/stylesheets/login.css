@@ -46,10 +46,26 @@
 	font-weight: 700;
 }
 
+.login-form input {
+	background: #FFF;
+	color: #444;
+}
+
 .login-form input[type="submit"],
 .login-form a {
 	border-radius: 2px;
 }
+
+.login-form .text-inputs > input:first-child {
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.login-form .text-inputs > input:last-child {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
 
 .login-form .register-link {
 	width: 280px;
