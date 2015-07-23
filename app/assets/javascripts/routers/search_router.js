@@ -6,7 +6,7 @@ Tilblr.Routers.SearchRouter = Backbone.Router.extend({
   initialize: function (options) {
     this.blogResults = options.blogResults;
     this.postResults = options.postResults;
-    Tilblr.Models.currentUser = new Tilblr.Models.User({id: options.currentUserId});
+    Tilblr.Models.currentUser = new Tilblr.Models.User();
 
     this.setupContainer();
   },
