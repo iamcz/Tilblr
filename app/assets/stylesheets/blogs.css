@@ -212,7 +212,8 @@
 	border-radius: 3px;
 }
 .blog-item {
-	margin: 10px 0;
+	/*margin: 10px 0;*/
+	padding: 5px 0;
 }
 
 .blog-item .blog-avatar {
@@ -231,11 +232,34 @@
 }
 
 .blog-item .text-info-section {
-	width: 120px;
+	width: 100px;
 	float: left;
 }
 
 .blog-item .follow-button-section {
-	width: 60px;
+	width: 80px;
 	float: right;
+}
+
+.blog-item .follow {
+	margin-top: 9px;
+}
+
+.recommendations-header {
+	padding: 5px 10px;
+	border-bottom: 3px solid #505E72;
+}
+
+.recommendations-header h4 {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.recommended .blog-item:not(:last-child) {
+	border-bottom: 1px solid #505E72;
+}
+
+.recommended .blog-item:hover {
+	background: rgba(255, 255, 255, 0.1)
 }
