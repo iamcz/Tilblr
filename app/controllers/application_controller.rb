@@ -29,6 +29,6 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_logged_in
-    redirect_to current_user.active_blog if logged_in?
+    redirect_to feed_url(current_user.active_blog.id) if logged_in?
   end
 end

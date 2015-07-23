@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if @user
       login @user
-      redirect_to @user.active_blog
+      redirect_to feed_url(@user.active_blog.id)
     else
       flash[:errors] = ["Invalid email/password combination"]
       redirect_to new_session_url
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
   def omniauth
     @user = User.find_or_create_by_auth_hash(auth_hash)
     login @user
-    redirect_to @user.active_blog
+    redirect_to feed_url(@user.active_blog.id)
   end
 
   private

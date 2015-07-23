@@ -1,12 +1,12 @@
 class Api::PostsController < ApplicationController 
   def index
     @posts = Post.includes(:tags, :blog => :tags)
-      .where("blog_id = ?", params[:blog_id])
+      .where(blog_id: params[:blog_id])
       .page(params[:page].to_i).per(10)
   end
 
   def show
-    @post = post.find(params[:id])
+    @post = Post.includes(:tags, :blog => :tags).find(params[:id])
   end
 
   def create
@@ -37,7 +37,8 @@ class Api::PostsController < ApplicationController
   end
 
   def feed_posts
-    @blog = current_user.blogs.find(params[:blog_id])
+    @blog = current_user.blogs
+      .find(params[:blog_id])
     @posts = Kaminari.paginate_array(@blog.feed.sort_by(&:created_at).reverse)
       .page(params[:page]).per(10)
     render :index
