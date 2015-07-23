@@ -30,6 +30,7 @@
 }
 
 #nav-search input {
+	color: #A9A9A9;
 	padding: 10px;
 	border-radius: 5px;
 	width: 100%;
@@ -39,6 +40,7 @@
 }
 
 #nav-search input:focus {
+	color: #444;
 	background: #FFF;
 }
 
