@@ -1,7 +1,7 @@
 Tilblr.Views.PostShow = Backbone.View.extend({
   template: JST["posts/show"],
   tagName: "section",
-  className: "group",
+  className: "post-show group",
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);

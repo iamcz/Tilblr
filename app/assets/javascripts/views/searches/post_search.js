@@ -12,6 +12,8 @@ Tilblr.Views.PostSearch = Backbone.CompositeView.extend({
       this.addSubview("#post-list", postView);
     }.bind(this));
 
-    return this;
+    this.$("#post-list").masonry();
+
+   return this;
   }
 });

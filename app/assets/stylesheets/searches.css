@@ -50,6 +50,10 @@
 	font-weight: 700;
 }
 
+#post-list {
+	padding: 20px;
+}
+
 #post-list section {
 	margin: 0 20px;
 	height: 280px;

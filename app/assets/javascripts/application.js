@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.serializejson
+//= require masonry.pkgd
 //= require underscore
 //= require backbone
 //= require tilblr
