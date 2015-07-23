@@ -207,3 +207,25 @@
 	width: 400px;
 	border: 1px solid #D7D7D7;
 }
+
+.blog-avatar img {
+	border-radius: 3px;
+}
+.blog-item {
+	margin: 10px 0;
+}
+
+.blog-item .blog-avatar {
+	float: left;
+}
+
+.blog-item .blog-avatar img {
+	height: 40px;
+	width: 40px;
+}
+
+.blog-item .blog-info {
+	float: right;
+	margin-left: 10px;
+	width: calc(100% - 50px)
+}

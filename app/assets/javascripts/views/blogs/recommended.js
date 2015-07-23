@@ -16,7 +16,7 @@ Tilblr.Views.RecommendedBlogs = Backbone.CompositeView.extend({
 
   addBlogs: function () {
     this.collection.each(function (blog) {
-      var blogItem = new Tilblr.Views.RecommendedBlogItem({model: blog});
+      var blogItem = new Tilblr.Views.BlogItem({model: blog});
       this.addSubview(".blog-list", blogItem);
     }.bind(this));
   }
