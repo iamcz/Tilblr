@@ -1,7 +1,3 @@
-unless @results.empty?
-  json.array! @results.first.tagged_posts do |post_result|
-    json.partial! 'api/posts/post', post: post_result
-  end
-else
-  json.array! []
+json.array! @results do |post_result|
+  json.partial! 'api/posts/post', post: post_result
 end
