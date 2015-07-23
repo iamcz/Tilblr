@@ -1,0 +1,9 @@
+<a href="/blogs/<%= blog.id %>" class="group">
+  <figure class="blog-avatar">
+    <img src="<%= blog.get('avatar_url') %>">
+  </figure>
+
+  <section class="blog-info">
+    <h6><%= blog.get("title") %></h6>
+  </section>
+</a>

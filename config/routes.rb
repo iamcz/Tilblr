@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :users, only: :show
 
     get "feed_posts", to: "posts#feed_posts"
+    get "recommended_blogs", to: "blogs#recommended_blogs"
 
     resource :search, only: :show
   end
