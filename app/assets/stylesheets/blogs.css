@@ -70,7 +70,7 @@
 
 .post > button,
 .post > form,
-.post > section {
+.post > article {
 	background: #FFF;
 	padding: 10px 20px;
 	border-radius: 3px;
@@ -80,7 +80,7 @@
 	position: absolute;
 	margin: 0;
 	top: 0px;
-	left: -70px;
+	left: -80px;
 }
 
 .post .blog-avatar img {
@@ -93,7 +93,7 @@
 .create-post.post,
 #post-form.post,
 .post:not(:last-child) {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .post.active:before {

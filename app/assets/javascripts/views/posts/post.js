@@ -1,6 +1,6 @@
 Tilblr.Views.PostView = Backbone.View.extend({
   className: "post",
-  tagName: "article",
+  tagName: "section",
 
   id: function () {
     return "post-" + this.model.id;
