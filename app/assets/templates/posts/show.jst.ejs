@@ -1,9 +1,15 @@
+<header class="post-header">
+</header>
+
 <figure class="blog-avatar">
   <img src="<%= post.blog().get('avatar_url') %>">
 </figure>
-<h6><%= post.blog().escape("title") %></h6>
+
 <h1><%= post.escape("title") %></h1> 
 <p><%= post.escape("body") %></p>
+
+<footer class="post-footer">
+</footer>
 <% if (Tilblr.Models.currentUser.ownsPost(post)) { %>
   <button class="edit-post">Edit</button>
   <button class="destroy-post">Delete</button>

@@ -10,6 +10,8 @@ Tilblr.Views.PostShow = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template({post: this.model}));
 
+    this.addHeader();
+
     return this;
   },
 
