@@ -3,7 +3,13 @@ Tilblr.Collections.Posts = Backbone.Collection.extend({
   model: Tilblr.Models.Post,
 
   initialize: function (models, options) {
-    this.blog = options.blog;
+    if (typeof options !== "undefined") {
+      for (var key in options) {
+        this[key] = options[key];
+      }
+    }
+
+    this.doneFetching = false;
     this.page = 1;
   },
 
@@ -21,10 +27,13 @@ Tilblr.Collections.Posts = Backbone.Collection.extend({
   },
 
   fetch: function () {
+    if (this.doneFetching) return;
+
     Backbone.Collection.prototype.fetch.call(this, {
       remove: false,
       data: { blog_id: this.blog.id, page: this.page },
-      success: function () {
+      success: function (collection, response, options) {
+        if (response.length === 0) this.doneFetching = true;
         this.page += 1;
       }.bind(this)
     });

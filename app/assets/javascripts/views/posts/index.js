@@ -38,7 +38,6 @@ Tilblr.Views.PostsIndex = Backbone.CompositeView.extend({
   },
 
   fetchMorePosts: function (event) {
-    console.log($(window).scrollTop(), $(document).height() - $(window).height())
     if ($(window).scrollTop() === $(document).height() - $(window).height()) {
       this.collection.fetch();
     }

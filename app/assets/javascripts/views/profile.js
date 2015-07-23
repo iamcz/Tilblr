@@ -1,4 +1,4 @@
-Tilblr.Views.ProfileView = Backbone.View.extend({
+Tilblr.Views.ProfileView = Backbone.CompositeView.extend({
   events: {
     "click": "preventPropagation"
   },
@@ -17,7 +17,8 @@ Tilblr.Views.ProfileView = Backbone.View.extend({
     this.$("#profile-blogs").empty();
 
     this.collection.each(function (blog) {
-      var profileBlogItem = new Tilblr.Views.ProfileBlogItem({model: blog});
+      var profileBlogItem = new Tilblr.Views.BlogItem({model: blog});
+      //this.addSubview("#profileBlogs", profileBlogItem);
       this.$("#profile-blogs").append(profileBlogItem.render().$el);
     });
   },

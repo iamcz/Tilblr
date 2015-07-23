@@ -11,5 +11,7 @@ Tilblr.Views.BlogItem = Backbone.CompositeView.extend({
 
   render: function () {
     this.$el.html(this.template({blog: this.model}));
+
+    return this;
   }
 });

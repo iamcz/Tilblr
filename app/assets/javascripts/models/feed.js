@@ -18,7 +18,10 @@ Tilblr.Models.Feed = Backbone.Model.extend({
   },
 
   posts: function () {
-    this._posts = this._posts || new Tilblr.Collections.FeedPosts([], {blog: this});
+    this._posts = this._posts || new Tilblr.Collections.Posts([], {
+      blog: this,
+      url: "/api/feed_posts"
+    });
 
     return this._posts;
   },

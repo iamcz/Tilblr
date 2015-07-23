@@ -81,6 +81,7 @@
 }
 
 #profile-nav {
+	background: #FFF;
 	display: none;
 	opacity: 0;
 	position: absolute;
@@ -122,9 +123,12 @@
 	border-bottom-right-radius: 2px;
 }
 
+#profile-nav header.account h6 {
+	text-transform: uppercase;
+}
+
 #profile-nav h6 {
 	font-weight: 700;
-	text-transform: uppercase;
 	float: left;
 }
 
