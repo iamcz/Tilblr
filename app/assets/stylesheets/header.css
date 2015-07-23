@@ -50,6 +50,8 @@
 	color: #FFFFFF;
 }
 
+#header-buttons .login-link,
+#header-buttons .register-link,
 #header-buttons #profile-button {
 	font-weight: 700;
 }
