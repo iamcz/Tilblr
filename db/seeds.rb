@@ -38,7 +38,7 @@ js_tags = "javascript bad"
 css_tags = "css style pretty"
 
 guest_user = User.create!( username: "guest user", email: "guest@tilblr.com", password: "password")
-gues_user.active_blog.udpate!(title: "Guest Blog")
+guest_user.active_blog.update!(title: "Guest Blog")
 
 rails_user = User.create!( username: "rails blogger", email: "railsenthusiast@gmail.com", password: "railsisthebest" )
 rails_user.active_blog.update!(title: "Rails Blog", tag_names: rails_tags)
@@ -48,7 +48,7 @@ css_user = User.create!( username: "css blogger", email: "cascade@gmail.com", pa
 css_user.active_blog.update!(title: "CSS Blog", tag_names: css_tags)
 ruby_user = User.create!( username: "ruby blogger", email: "rubybaby@yahoo.com", password: "metameta" )
 ruby_user.active_blog.update!(title: "Ruby Blog", tag_names: ruby_tags)
-js_user = User.create!( user: "js blogger", email: "javascript@gmail.com", password: "falseyvalue" )
+js_user = User.create!( username: "js blogger", email: "javascript@gmail.com", password: "falseyvalue" )
 js_user.active_blog.update!(title: "Javascript Blog",tag_names: js_tags)
 
 ruby_user.active_blog.follow(rails_user.active_blog)
@@ -60,9 +60,9 @@ js_user.active_blog.follow(css_user.active_blog)
 css_user.active_blog.follow(js_user.active_blog)
 css_user.active_blog.follow(ruby_user.active_blog)
 
-guest_user.active_blog.follow(rails_user)
-guest_user.active_blog.follow(ruby_user)
-guest_user.active_blog.follow(backbone_user)
+guest_user.active_blog.follow(rails_user.active_blog)
+guest_user.active_blog.follow(ruby_user.active_blog)
+guest_user.active_blog.follow(back_user.active_blog)
 
 rails_user.active_blog.posts.create!(
   title: "inverse_of",
