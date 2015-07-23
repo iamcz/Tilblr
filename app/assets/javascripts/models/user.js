@@ -1,6 +1,5 @@
 Tilblr.Models.User = Backbone.Model.extend({
-  urlRoot: "/api/users",
-  url: "/api/current_user",
+  url: "/api/user",
   
   parse: function (response) {
     if (response.active_blog) {
