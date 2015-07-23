@@ -4,7 +4,7 @@ $(function () {
   var searchView = Tilblr.Views.SearchView;
   var blogResults = new Tilblr.Collections.BlogResults([], queryObj);
   var postResults = new Tilblr.Collections.PostResults([], queryObj);
-  var currentUserId = <%= current_user.id %>;
+  var currentUserId = <%= logged_in? ? current_user.id : "undefined" %>;
 
   new Tilblr.Routers.SearchRouter({
     blogResults: blogResults,
