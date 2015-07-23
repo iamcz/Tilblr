@@ -21,7 +21,8 @@ Tilblr.Views.FollowButton = Backbone.View.extend({
     this.$el.html(text);
   },
 
-  toggleFollow: function () {
+  toggleFollow: function (event) {
+    event.preventDefault();
     this.$el.prop({disabled: true});
 
     if (this.model.isNew()) {

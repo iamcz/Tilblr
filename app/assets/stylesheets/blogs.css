@@ -227,5 +227,15 @@
 .blog-item .blog-info {
 	float: right;
 	margin-left: 10px;
-	width: calc(100% - 50px)
+	width: 180px;
+}
+
+.blog-item .text-info-section {
+	width: 120px;
+	float: left;
+}
+
+.blog-item .follow-button-section {
+	width: 60px;
+	float: right;
 }

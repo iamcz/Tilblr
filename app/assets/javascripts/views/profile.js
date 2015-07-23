@@ -17,8 +17,10 @@ Tilblr.Views.ProfileView = Backbone.CompositeView.extend({
     this.$("#profile-blogs").empty();
 
     this.collection.each(function (blog) {
-      var profileBlogItem = new Tilblr.Views.BlogItem({model: blog});
-      //this.addSubview("#profileBlogs", profileBlogItem);
+      var profileBlogItem = new Tilblr.Views.BlogItem({
+        model: blog,
+        hasFollowButton: false
+      });
       this.$("#profile-blogs").append(profileBlogItem.render().$el);
     });
   },
