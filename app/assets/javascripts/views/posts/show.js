@@ -1,4 +1,4 @@
-Tilblr.Views.PostShow = Backbone.View.extend({
+Tilblr.Views.PostShow = Backbone.CompositeView.extend({
   template: JST["posts/show"],
   tagName: "article",
   className: "post-show group",
