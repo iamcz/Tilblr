@@ -5,6 +5,7 @@ Tilblr.Views.FeedSidebar = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render)
+    this.listenTo()
   },
 
   render: function () {
