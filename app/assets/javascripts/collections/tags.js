@@ -1,1 +1,3 @@
-Tilblr.Collections.Tags = Backbone.Collection.extend({ });
+Tilblr.Collections.Tags = Backbone.Collection.extend({ 
+  model: Tilblr.Models.Tag;
+});

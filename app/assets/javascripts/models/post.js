@@ -11,6 +11,11 @@ Tilblr.Models.Post = Backbone.Model.extend({
       delete response.blog;
     }
 
+    if (response.tags) {
+      this.tags().set(response.tags);
+      delete response.tags;
+    }
+
     return response;
   },
 
@@ -21,8 +26,14 @@ Tilblr.Models.Post = Backbone.Model.extend({
   },
 
   blog: function () {
-    this._blog = this._blog || new Tilblr.Models.Blog()
+    this._blog = this._blog || new Tilblr.Models.Blog();
 
     return this._blog;
+  },
+
+  tags: function () {
+    this._tags = this._tags || new Tilblr.Collections.Tags();
+
+    return this._tags;
   }
 });
