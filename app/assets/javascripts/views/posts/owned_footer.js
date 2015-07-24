@@ -1,4 +1,4 @@
-Tilblr.Views.PostFooter = Backbone.CompositeView.extend({
+Tilblr.Views.OwnedFooter = Backbone.CompositeView.extend({
   template: JST["posts/owned_footer"],
   tagName: "section",
 
