@@ -2,10 +2,16 @@ class BlogsController < ApplicationController
   before_action :ensure_logged_in
 
   def show
-    @blog = Blog.find(params[:id])
+    # @blog = Blog.find(params[:id])
 
-    if logged_in? && current_user.blogs.include?(@blog)
-      current_user.update(active_blog: @blog)
+    # if logged_in? && current_user.blogs.include?(@blog)
+    #   current_user.update(active_blog: @blog)
+    # end
+
+    @blog_id = params[:id]
+    
+    if logged_in? && current_user.blogs.find_by(id: @blog_id)
+      current_user.update(active_blog_id: @blog_id)
     end
   end
 
