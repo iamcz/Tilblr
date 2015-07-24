@@ -15,13 +15,17 @@ Tilblr.Views.BlogItem = Backbone.CompositeView.extend({
     this.$el.html(this.template({blog: this.model}));
 
     if (this.hasFollowButton) {
-      var followButton = new Tilblr.Views.FollowButton({
-        model: Tilblr.Models.currentUser.activeBlog().followFor(this.model)
-      });
-
-      this.addSubview(".follow-button-section", followButton);
+      this.addFollowButton();
     }
 
     return this;
+  },
+
+  addFollowButton: function () {
+    var followButton = new Tilblr.Views.FollowButton({
+      model: Tilblr.Models.currentUser.activeBlog().followFor(this.model)
+    });
+
+    this.addSubview(".follow-button-section", followButton);
   }
 });

@@ -6,7 +6,13 @@ Tilblr.Collections.Follows = Backbone.Collection.extend({
 
     if (typeof follow === "undefined") {
       follow = new Tilblr.Models.Follow(attributes);
-      follow.fetch();
+      follow.fetch({
+        success: function () {
+          this.add(follow)
+        }.bind(this)
+      });
+
+      this.add(follow);
     }
 
     return follow;
