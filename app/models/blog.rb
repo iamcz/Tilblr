@@ -31,7 +31,8 @@ class Blog < ActiveRecord::Base
   end
 
   def feed
-    followed_blog_posts.includes(:tags, :blog => :tags).to_a
-      .concat(posts.includes(:tags, :blog => :tags).to_a)
+    sql = [followed_blog_posts, posts].map { |assoc| "(#{assoc.to_sql})" }.join(" union ")
+    post_ids = Post.find_by_sql(sql).map(&:id)
+    Post.order(created_at: :desc).includes(:tags, :blog => :tags).find(post_ids)
   end
 end
