@@ -17,7 +17,8 @@
 	position: relative;
 }
 
-.post p {
+.post p,
+.post .tags {
 	font-size: 14px;
 	line-height: 1.5em;
 }

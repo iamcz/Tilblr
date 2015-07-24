@@ -11,6 +11,7 @@ Tilblr.Views.PostShow = Backbone.CompositeView.extend({
     this.$el.html(this.template({post: this.model}));
 
     this.addHeader();
+    this.addTags();
     this.addFooter();
 
     return this;
@@ -36,5 +37,12 @@ Tilblr.Views.PostShow = Backbone.CompositeView.extend({
   addBlogAvatar: function () {
     var blogAvatar = new Tilblr.Views.BlogAvatar({model: this.model.blog()});
     this.addSubview(".blog-avatar", blogAvatar);
+  },
+
+  addTags: function () {
+    this.model.tags().each(function (tag) {
+      var tagView = new Tilblr.Views.TagShow({model: tag});
+      this.addSubview(".tags", tagView);
+    }.bind(this));
   }
 })
