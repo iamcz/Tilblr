@@ -12,6 +12,10 @@ Tilblr.Views.PostShow = Backbone.CompositeView.extend({
 
     this.addHeader();
 
+    if (Tilblr.Models.currentUser.ownsPost(this.model)) {
+      this.addOwnedFooter();
+    }
+
     return this;
   },
 
@@ -20,8 +24,15 @@ Tilblr.Views.PostShow = Backbone.CompositeView.extend({
     this.addSubview(".post-header", postHeader);
   },
 
-  addFooter: function () {
-    var postFooter = new Tilblr.Views.PostFooter({model: this.model});
+  addOwnedFooter: function () {
+    var postFooter;
+
+    if (Tilblr.Models.currentUser.ownsPost(this.model)) {
+      postFooter = new Tilblr.Views.OwnedFooter({model: this.model});
+    } else {
+      postFooter = new Tilblr.Views.UnownedFooter({model: this.model});
+    }
+
     this.addSubview(".post-footer", postFooter);
   },
 
