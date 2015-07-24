@@ -31,8 +31,12 @@ class Blog < ActiveRecord::Base
   end
 
   def feed
-    sql = [followed_blog_posts, posts].map { |assoc| "(#{assoc.to_sql})" }.join(" union ")
-    post_ids = Post.find_by_sql(sql).map(&:id)
-    Post.order(created_at: :desc).includes(:tags, :blog => :tags).find(post_ids)
+    id_sql = [followed_blog_posts, posts].map do |assoc| 
+      "(#{assoc.select(:id).to_sql})"
+    end.join(" union ")
+
+    Post.order(created_at: :desc)
+      .includes(:tags, :blog => :tags)
+      .where("id IN (#{id_sql})")
   end
 end

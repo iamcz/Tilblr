@@ -39,11 +39,7 @@ class Api::PostsController < ApplicationController
   def feed_posts
     @blog = current_user.blogs.find(params[:blog_id])
 
-    # @posts = Kaminari.paginate_array(
-    #   @blog.feed.sort_by(&:created_at).reverse
-    # ).page(params[:page]).per(10)
-    
-    @posts = Kaminari.paginate_array(@blog.feed).page(params[:page]).per(10)
+    @posts = @blog.feed.page(params[:page]).per(10)
     
     render :index
   end
