@@ -13,6 +13,7 @@ class Api::BlogsController < ApplicationController
       .followed_follows
       .map(&:followed_id)
       .concat([current_user.active_blog_id])
+
     @blogs = Blog
       .where.not(user_id: current_user.id)
       .where.not("id IN (?)", followed_ids)

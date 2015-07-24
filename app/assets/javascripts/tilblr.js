@@ -10,16 +10,23 @@ window.Tilblr = {
 
     Tilblr.Models.currentUser = new Tilblr.Models.User();
 
-    Tilblr.Models.currentUser.fetch({
-      success: function () {
-        new Tilblr.Routers.BlogRouter({
-          model: model,
-          view: view
-        });
-
-        Backbone.history.start();
-      }
+    Tilblr.Models.currentUser.fetch();
+    new Tilblr.Routers.BlogRouter({
+      model: model,
+      view: view
     });
+    Backbone.history.start();
+    
+    // Tilblr.Models.currentUser.fetch({
+    //   success: function () {
+    //     new Tilblr.Routers.BlogRouter({
+    //       model: model,
+    //       view: view
+    //     });
+
+    //     Backbone.history.start();
+    //   }
+    // });
     
 
   }
