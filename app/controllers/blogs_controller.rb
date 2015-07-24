@@ -14,7 +14,6 @@ class BlogsController < ApplicationController
   end
 
   def create
-    debugger
     @blog = current_user.blogs.new(blog_params)
 
     if @blog.save
