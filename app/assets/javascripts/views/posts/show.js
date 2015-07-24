@@ -1,7 +1,7 @@
 Tilblr.Views.PostShow = Backbone.CompositeView.extend({
   template: JST["posts/show"],
   tagName: "article",
-  className: "post-show group",
+  className: "post post-show group",
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);

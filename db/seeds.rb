@@ -7,29 +7,25 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-10.times do
-  name = Faker::Name.name
-  email = Faker::Internet.email(name)
-  username = Faker::Internet.user_name(name)
-  password = "password"
+name = Faker::Name.name
+email = Faker::Internet.email(name)
+username = Faker::Internet.user_name(name)
+password = "password"
 
-  user = User.new(email: email, username: username, password: password)
-  user.save
-  5.times do |i|
-    title = "blog-#{i}"
-    blog = user.blogs.new(title: title, tag_names: "lorem")
-    blog.save
+user = User.new(email: email, username: username, password: password)
+user.save
+5.times do |i|
+  title = "blog-#{i}"
+  blog = user.blogs.new(title: title, tag_names: "lorem")
+  blog.save
 
-    50.times do |j|
-      title = "post-#{j}"
-      body = Faker::Lorem.paragraphs(2).join("\n")
-      post = blog.posts.new(title: title, body: body, tag_names: "ipsum")
-      post.save
-    end
+  50.times do |j|
+    title = "post-#{j}"
+    body = Faker::Lorem.paragraphs(2).join("\n")
+    post = blog.posts.new(title: title, body: body, tag_names: "ipsum")
+    post.save
   end
 end
-
-
 
 ruby_tags = "ruby meta"
 rails_tags = "ruby rails"
