@@ -3,7 +3,7 @@
 
 <script>
 $(function () {
-  var feedId = <%= @blog.id %>;
+  var feedId = <%= @blog_id %>;
   var feed = new Tilblr.Models.Feed({id: feedId});
   var feedView = Tilblr.Views.FeedShow;
   
