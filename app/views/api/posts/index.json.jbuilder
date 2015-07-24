@@ -1,5 +1,5 @@
 json.array! @posts do |post|
-  json.extract! post, :id, :title, :body, :tag_names, :created_at
+  json.partial! 'api/posts/post', post: post
   json.blog do
     json.partial! 'api/blogs/blog', blog: post.blog
   end

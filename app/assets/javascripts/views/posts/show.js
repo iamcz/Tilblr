@@ -11,10 +11,7 @@ Tilblr.Views.PostShow = Backbone.CompositeView.extend({
     this.$el.html(this.template({post: this.model}));
 
     this.addHeader();
-
-    if (Tilblr.Models.currentUser.ownsPost(this.model)) {
-      this.addOwnedFooter();
-    }
+    this.addFooter();
 
     return this;
   },
@@ -24,7 +21,7 @@ Tilblr.Views.PostShow = Backbone.CompositeView.extend({
     this.addSubview(".post-header", postHeader);
   },
 
-  addOwnedFooter: function () {
+  addFooter: function () {
     var postFooter;
 
     if (Tilblr.Models.currentUser.ownsPost(this.model)) {
