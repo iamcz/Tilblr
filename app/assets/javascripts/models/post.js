@@ -12,6 +12,7 @@ Tilblr.Models.Post = Backbone.Model.extend({
     }
 
     if (response.tags) {
+      debugger;
       this.tags().set(response.tags);
       delete response.tags;
     }
