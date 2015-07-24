@@ -1,3 +1,12 @@
+#posts-index h1 {
+	font-size: 2em;
+}
+
+#posts-index h1,
+#posts-index p {
+	margin: 10px 0; 
+}
+
 .post-header a {
 	font-size: 13px;
 	font-weight: 700;
@@ -6,6 +15,11 @@
 
 .post {
 	position: relative;
+}
+
+.post p {
+	font-size: 14px;
+	line-height: 1.5em;
 }
 
 .post > button,
@@ -28,6 +42,10 @@
 	height: 60px;
 	width: 60px;
 	border-radius: 3px;
+}
+
+.post .post-footer {
+	height: 25px;
 }
 
 .create-post.post,

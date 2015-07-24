@@ -49,15 +49,6 @@
 	float: right;
 }
 
-#posts-index h1 {
-	font-size: 2em;
-}
-
-#posts-index h1,
-#posts-index p {
-	margin: 10px 0; 
-}
-
 #blog-sidebar h1 {
 	float: left;
 	font-size: 1em;
