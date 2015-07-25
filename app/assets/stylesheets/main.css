@@ -9,10 +9,7 @@ input[type="submit"]:active {
 	opacity: 0.9;
 }
 
-button {
-
-}
-
+/*
 .post button:not(.create-post),
 input[type="submit"],
 .cancel,
@@ -24,3 +21,4 @@ input[type="submit"],
 	color: white;
 	margin-left: 5px;
 }
+*/

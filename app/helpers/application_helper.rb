@@ -1,6 +1,6 @@
 module ApplicationHelper
   def form_authentication
-    <<-HTML 
+    <<-HTML.html_safe
       <input 
         type="hidden" 
         name="authenticity_token" 
