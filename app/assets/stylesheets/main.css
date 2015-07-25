@@ -8,3 +8,19 @@ button:active,
 input[type="submit"]:active {
 	opacity: 0.9;
 }
+
+button {
+
+}
+
+.post button:not(.create-post),
+input[type="submit"],
+.cancel,
+.follow {
+	padding: 5px 10px;
+	border-radius: 2px;
+	font-size: 12px;
+	font-weight: 700;
+	color: white;
+	margin-left: 5px;
+}
