@@ -57,9 +57,9 @@
 
 
 #new-blog {
-	width: 900px;
-	margin: 100px auto;
-	padding: 20px;
+	width: 840px;
+	margin: 0 auto;
+	padding: 20px 30px;
 	background: #FFF;
 	color: #444;
 	border-radius: 10px;
@@ -68,7 +68,7 @@
 #new-blog h2 {
 	font-size: 36px;
 	font-weight: 700;
-	margin: 20px 0;
+	margin-bottom: 20px;
 }
 
 #new-blog .input:first-child {
@@ -79,6 +79,26 @@
 	border-bottom: 1px solid #D7D7D7;
 }
 
+#new-blog .input label {
+	float: left;
+	display: block;
+	padding: 25px 15px 25px 30px;
+	width: 73px;
+	background: #F5F5F5;
+	text-align: right;
+}
+
+#new-blog .input .input-wrapper {
+	float: right;
+}
+
+.input-wrapper {
+	padding: 10px;
+	border: 1px solid #D5D9DD;
+	font-size: 22px;
+}
+
+/*
 #new-blog .input label {
 	float: left;
 	width: 120px;
@@ -95,7 +115,9 @@
 	width: 400px;
 	border: 1px solid #D7D7D7;
 }
+*/
 
+#new-blog .
 .blog-avatar img {
 	border-radius: 3px;
 }

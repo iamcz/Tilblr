@@ -1,4 +1,4 @@
-<%= form_for blog, html: { multipart: true } do |f| %>
+<!-- <%= form_for blog, html: { multipart: true } do |f| %>
   <%= f.file_field :avatar %>
   <section class="input group">
     <%= f.label :title %>
@@ -10,4 +10,27 @@
   </section>
   <button class="cancel">Cancel</button>
   <%= f.submit "Create blog" %>
-<% end %>
+<% end %> -->
+
+<form id="blog-form" action="/blogs" method="post">
+  <section class="input group">
+    <label for="blog_title">Title</label>
+    <span class="input-wrapper">
+      <input 
+        type="text" 
+        id="blog_title"
+        name="blog[title]">
+    </span>
+  </section>
+  <section class="input group">
+    <label for="blog_url">URL</label>
+    <section class="input-wrapper group">
+      <input 
+        type="text" 
+        id="blog_url"
+        name="blog[url]">
+      <p class="input-constant">.tilblr.com</p>
+    </section>
+  </section>
+</form>
+  

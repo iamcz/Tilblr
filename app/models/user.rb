@@ -1,11 +1,14 @@
 class User < ActiveRecord::Base
+  include ActiveModel::Validations
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   attr_accessor :password
   validates :username, :session_token, :password_digest, :active_blog, presence: true
   validates :password, length: {minimum: 8, allow_nil: true}
-  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
+  validates :username, uniqueness: true
+  validates_with URLValidator
 
   after_initialize :ensure_session_token
   before_validation :ensure_active_blog
@@ -60,7 +63,7 @@ class User < ActiveRecord::Base
     return if self.active_blog
 
     if self.blogs.empty?
-      self.blogs = [Blog.new(title: "Untitled")]
+      self.blogs = [Blog.new(title: "Untitled", url: self.username)]
     end
 
     self.active_blog = self.blogs.first

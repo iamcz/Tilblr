@@ -1,7 +1,10 @@
 class Blog < ActiveRecord::Base
   include Taggable
+  include ActiveModel::Validations
 
-  validates :title, :owner, presence: true
+  validates :title, :owner, :url, presence: true
+  validates :url, uniqueness: true
+  validates_with URLValidator
 
   belongs_to :owner, class_name: "User", foreign_key: :user_id, inverse_of: :blogs
   has_one :active_user, class_name: "User", foreign_key: :active_blog_id, inverse_of: :active_blog
