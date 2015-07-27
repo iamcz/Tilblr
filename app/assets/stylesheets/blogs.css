@@ -55,10 +55,9 @@
 	font-weight: 700;
 }
 
-
 #new-blog {
-	width: 900px;
-	margin: 100px auto;
+	width: 860px;
+	margin: 0 auto;
 	padding: 20px;
 	background: #FFF;
 	color: #444;
@@ -94,6 +93,25 @@
 	margin: 14px;
 	width: 400px;
 	border: 1px solid #D7D7D7;
+}
+
+#new-blog .cancel,
+#new-blog input[type="submit"] {
+	margin-top: 10px;
+	font-size: 12px;
+	font-weight: 700;
+	color: #FFF;
+	border-radius: 2px;
+	padding: 10px;
+}
+
+#new-blog .cancel {
+	float: left
+}
+
+#new-blog input[type="submit"] {
+	float: right;
+	background: #529ECC;
 }
 
 .blog-avatar img {
