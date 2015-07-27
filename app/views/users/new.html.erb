@@ -16,4 +16,12 @@
 
     <%= f.submit "Sign Up" %>
   <% end %>
+  <form action="/session" method="post" class="guest-login">
+    <input type="hidden"
+           name="authenticity_token"
+           value="<%= form_authenticity_token %>">
+    <input type="hidden" name="user[email]" value="guest@tilblr.com">
+    <input type="hidden" name="user[password]" value="password">
+    <input type="submit" value="Log in as guest">
+  </form>
 </section>
