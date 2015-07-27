@@ -16,18 +16,5 @@ window.Tilblr = {
       view: view
     });
     Backbone.history.start();
-    
-    // Tilblr.Models.currentUser.fetch({
-    //   success: function () {
-    //     new Tilblr.Routers.BlogRouter({
-    //       model: model,
-    //       view: view
-    //     });
-
-    //     Backbone.history.start();
-    //   }
-    // });
-    
-
   }
 };
