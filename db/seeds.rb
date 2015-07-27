@@ -7,25 +7,25 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-name = Faker::Name.name
-email = Faker::Internet.email(name)
-username = Faker::Internet.user_name(name)
-password = "password"
-
-user = User.new(email: email, username: username, password: password)
-user.save
-5.times do |i|
-  title = "blog-#{i}"
-  blog = user.blogs.new(title: title, tag_names: "lorem")
-  blog.save
-
-  50.times do |j|
-    title = "post-#{j}"
-    body = Faker::Lorem.paragraphs(2).join("\n")
-    post = blog.posts.new(title: title, body: body, tag_names: "ipsum")
-    post.save
-  end
-end
+# name = Faker::Name.name
+# email = Faker::Internet.email(name)
+# username = Faker::Internet.user_name(name)
+# password = "password"
+# 
+# user = User.new(email: email, username: username, password: password)
+# user.save
+# 5.times do |i|
+#   title = "blog-#{i}"
+#   blog = user.blogs.new(title: title, tag_names: "lorem")
+#   blog.save
+# 
+#   50.times do |j|
+#     title = "post-#{j}"
+#     body = Faker::Lorem.paragraphs(2).join("\n")
+#     post = blog.posts.new(title: title, body: body, tag_names: "ipsum")
+#     post.save
+#   end
+# end
 
 ruby_tags = "ruby meta"
 rails_tags = "ruby rails"
@@ -37,13 +37,13 @@ guest_user = User.create!( username: "guest user", email: "guest@tilblr.com", pa
 guest_user.active_blog.update!(title: "Guest Blog")
 
 rails_user = User.create!( username: "rails blogger", email: "railsenthusiast@gmail.com", password: "railsisthebest" )
-rails_user.active_blog.update!(title: "Rails Blog", tag_names: rails_tags)
+rails_user.active_blog.update!(title: "Rails Blog", tag_names: rails_tags, avatar: File.open( Rails.root.join("app/assets/images/cone_open_64.png") ) )
 back_user = User.create!( username: "backbone blogger", email: "backbone@yahoo.com", password: "backbone" )
-back_user.active_blog.update!(title: "Backbone Blog", tag_names: backbone_tags)
+back_user.active_blog.update!(title: "Backbone Blog", tag_names: backbone_tags, avatar: File.open( Rails.root.join("app/assets/images/octohedron_closed_64.png") ) )
 css_user = User.create!( username: "css blogger", email: "cascade@gmail.com", password: "stylesfordays" )
-css_user.active_blog.update!(title: "CSS Blog", tag_names: css_tags)
+css_user.active_blog.update!(title: "CSS Blog", tag_names: css_tags, avatar: File.open( Rails.root.join("app/assets/images/pyramid_closed_64.png") ) )
 ruby_user = User.create!( username: "ruby blogger", email: "rubybaby@yahoo.com", password: "metameta" )
-ruby_user.active_blog.update!(title: "Ruby Blog", tag_names: ruby_tags)
+ruby_user.active_blog.update!(title: "Ruby Blog", tag_names: ruby_tags, avatar: File.open( Rails.root.join("app/assets/images/sphere_open_64.png") ) )
 js_user = User.create!( username: "js blogger", email: "javascript@gmail.com", password: "falseyvalue" )
 js_user.active_blog.update!(title: "Javascript Blog",tag_names: js_tags)
 
