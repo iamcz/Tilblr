@@ -3,7 +3,7 @@
 
 <script>
 $(function () {
-  var blogId = <%= @blog.id %>;
+  var blogId = <%= @blog_id %>;
   var blog = new Tilblr.Models.Blog({id: blogId});
   var blogView = Tilblr.Views.BlogShow;
 
